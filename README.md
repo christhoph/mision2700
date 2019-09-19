@@ -1,3 +1,7 @@
+# mision2700
+
+Client page for HandEyes - Mision 2700
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
