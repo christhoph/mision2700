@@ -1,5 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
+import { colors } from "./colors";
+
+const { white } = colors;
+
 export const GlobalStyles = createGlobalStyle`
   * {
     padding: 0;
@@ -8,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: #fff;
+    background: ${white};
     font-family: sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
