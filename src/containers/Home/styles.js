@@ -6,3 +6,8 @@ export const HomeContainer = styled.div`
   display: flex;
   flex-flow: column nowrap;
 `;
+
+export const HomeContent = styled.div`
+  width: 100%;
+  display: flex;
+`;

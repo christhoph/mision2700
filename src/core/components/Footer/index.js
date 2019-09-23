@@ -9,7 +9,7 @@ const Footer = () => {
     <FooterContainer>
       <FooterLabel>HandEyes &copy; {currentYear}</FooterLabel>
     </FooterContainer>
-   );
+  );
 };
 
 export default Footer;

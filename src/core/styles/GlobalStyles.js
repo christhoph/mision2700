@@ -11,6 +11,10 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    font-size: 16px;
+  }
+
   body {
     background: ${white};
     font-family: sans-serif;
@@ -20,5 +24,12 @@ export const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
+  }
+
+  button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
   }
 `;
