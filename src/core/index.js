@@ -6,3 +6,6 @@ export { Navbar, Footer };
 
 // styles for styled-components
 export * from "./styles";
+
+// constants
+export * from "./constants";

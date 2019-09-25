@@ -53,9 +53,9 @@ export const DonateButton = styled.button`
   color: ${white};
   font-size: 1.1rem;
   letter-spacing: 0.05rem;
-  animation: ${useColorCycle(true)} 5s infinite alternate;
+  animation: ${useColorCycle(true)} 5s ease-in-out alternate infinite;
 
   &:hover {
-    animation: ${useColorCycle()} 5s infinite alternate;
+    animation: ${useColorCycle()} 5s ease-in-out alternate infinite;
   }
 `;
