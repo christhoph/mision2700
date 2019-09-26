@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-import { MapContainer, MapImage } from "./styles";
+import { setChart } from "./setChart";
+import { MapContainer, MapChart } from "./styles";
 
-const Map = ({ containerCss }) => (
-  <MapContainer css={containerCss}>
-    <MapImage src="https://storage.googleapis.com/flexbox-180917.appspot.com/mision2700/mapa.jpg" alt="map" />
-  </MapContainer>
-);
+const Map = ({ containerCss }) => {
+  useEffect(() => {
+    const chart = setChart();
+
+    return () => chart.dispose();
+  }, []);
+
+  return (
+    <MapContainer css={containerCss}>
+      <MapChart id="chartdiv" />
+    </MapContainer>
+  );
+}
 
 export default Map;

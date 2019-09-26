@@ -6,6 +6,7 @@ export const MapContainer = styled.div`
   ${({ css }) => css}
 `;
 
-export const MapImage = styled.img`
+export const MapChart = styled.div`
+  height: 100%;
   width: 100%;
 `;
