@@ -50,7 +50,7 @@ export const ModalContent = styled.div`
 `;
 
 export const ModalContentUp = styled.div`
-  height: max-content;
+  height: 75%;
   width: 100%;
   display: flex;
 `;
