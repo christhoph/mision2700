@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
-import { GlobalStyles, Navbar, Footer } from "./core";
+import { GlobalStyles, Navbar, Footer, WhatsappButton } from "./core";
 import Home from "./containers/Home";
 
 const AppContainer = styled.div`
@@ -22,6 +22,7 @@ const App = () => (
     <AppView>
       <Navbar />
       <Home />
+      <WhatsappButton />
       <Footer />
     </AppView>
     <GlobalStyles />

@@ -10,5 +10,6 @@ export const colors = {
   green: "#21ba45",
   teal: "#00b5ad",
   blue: "#2185d0",
-  indigo: "#6610f2"
+  indigo: "#6610f2",
+  whatsappColor: "#25d366",
 };
