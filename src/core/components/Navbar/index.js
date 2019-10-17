@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import {
   NavbarContainer,
@@ -11,12 +12,12 @@ import {
 const Navbar = () => (
   <NavbarContainer>
     <LogoContainer>
-      <a href="/">
+      <Link to="/">
         <LogoImage
           src="https://storage.googleapis.com/flexbox-180917.appspot.com/mision2700/mision2700segunda.png"
           alt="mision 2700 2da edicion"
         />
-      </a>
+      </Link>
       <a href="http://handeyes.org/" target="_blank" rel="noopener noreferrer">
         <LogoImage
           className="hand-eyes-logo"
@@ -26,9 +27,15 @@ const Navbar = () => (
       </a>
     </LogoContainer>
     <MenuContainer>
-      <MenuItem>Inicio</MenuItem>
-      <MenuItem>Quienes Somos</MenuItem>
-      <MenuItem>Historias</MenuItem>
+      <MenuItem>
+        <Link to="/">Inicio</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link to="/about-us">Quienes Somos</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link to="/histories">Historias</Link>
+      </MenuItem>
     </MenuContainer>
   </NavbarContainer>
 );

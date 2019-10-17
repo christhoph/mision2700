@@ -33,8 +33,24 @@ export const InformationContent = styled.div`
 export const InformationContentItem = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   padding: 1.5rem 1rem;
+
+  span {
+    margin: 0 1rem;
+  }
+
+  .info-icon-container {
+    height: 30px;
+    width: 30px;
+    margin-right: 1rem;
+
+    .info-icon {
+      height: 30px;
+      width: 30px;
+      fill: ${skyBlue};
+    }
+  }
 `;
 
 export const DonationsCounter = styled.div`

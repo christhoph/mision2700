@@ -23,6 +23,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   a {
+    color: #000;
     text-decoration: none;
   }
 

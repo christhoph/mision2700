@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import Modal from '@material-ui/core/Modal';
+import Modal from "@material-ui/core/Modal";
 
 import { colors } from "../../core";
 
-const { white, darkBlue } = colors;
+const { white, darkBlue, skyBlue } = colors;
 
 export const MissionMapContainer = styled.div`
   padding: 1rem;
@@ -25,8 +25,8 @@ export const ModalContainer = styled(Modal)`
 `;
 
 export const ModalContent = styled.div`
-  height: 90%;
-  width: 90%;
+  height: 750px;
+  width: 1200px;
   background: ${white};
   display: flex;
   flex-direction: column;
@@ -41,6 +41,7 @@ export const ModalContent = styled.div`
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
+    cursor: pointer;
 
     .close-icon {
       height: 30px;
@@ -57,7 +58,7 @@ export const ModalContentUp = styled.div`
 
 export const ModalView = styled.div`
   height: 100%;
-  width: 80%;
+  width: 75%;
   display: flex;
   justify-content: center;
 `;
@@ -68,7 +69,7 @@ export const ModalViewImage = styled.img`
 
 export const ModalInfo = styled.div`
   height: 100%;
-  width: 20%;
+  width: 25%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,7 +89,7 @@ export const ModalInfoContent = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 2rem 1.5rem;
+  padding: 2rem 0;
 
   ${({ css }) => css}
 `;
@@ -97,10 +98,23 @@ export const ModalInfoContentItem = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 2rem 0;
 
   span {
-    margin-right: 2rem;
+    margin-right: 1rem;
+  }
+
+  .modal-info-icon-container {
+    height: 30px;
+    width: 30px;
+    margin-right: 1rem;
+
+    .modal-info-icon {
+      height: 30px;
+      width: 30px;
+      fill: ${skyBlue};
+    }
   }
 `;
 

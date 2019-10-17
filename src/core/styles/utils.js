@@ -27,3 +27,9 @@ export const useColorCycle = isHover => keyframes`
   ${definePercentValue(90, isHover, blue)}
   ${definePercentValue(100, isHover, indigo)}
 `;
+
+export const convertHexToRgba = (hex, alpha = 1) => {
+  const [r, g, b] = hex.match(/\w\w/g).map(x => parseInt(x, 16));
+
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+};

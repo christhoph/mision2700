@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 
-import { GlobalStyles, Navbar, Footer, WhatsappButton } from "./core";
-import Home from "./containers/Home";
+import { GlobalStyles } from "./core";
+import Routes from "./Routes";
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -20,10 +20,7 @@ const AppView = styled.div`
 const App = () => (
   <AppContainer>
     <AppView>
-      <Navbar />
-      <Home />
-      <WhatsappButton />
-      <Footer />
+      <Routes />
     </AppView>
     <GlobalStyles />
   </AppContainer>
