@@ -5,8 +5,23 @@ import SVGIcons from "./components/SVGIcons";
 import { SVGS } from "./components/SVGIcons/icons";
 import WhatsappButton from "./components/WhatsappButton";
 import EyeClipIcon from "./components/EyeClipIcon";
+import ContentSize from "./components/ContentSize";
+import Divider from "./components/Divider";
+import Modal from "./components/Modal";
+import ScrollableContainer from "./components/ScrollableContainer";
 
-export { Navbar, Footer, SVGIcons, SVGS, WhatsappButton, EyeClipIcon };
+export {
+  Navbar,
+  Footer,
+  SVGIcons,
+  SVGS,
+  WhatsappButton,
+  EyeClipIcon,
+  ContentSize,
+  Divider,
+  Modal,
+  ScrollableContainer
+};
 
 // styles for styled-components
 export * from "./styles";

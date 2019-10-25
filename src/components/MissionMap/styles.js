@@ -1,53 +1,16 @@
 import styled from "styled-components";
-import Modal from "@material-ui/core/Modal";
 
 import { colors } from "../../core";
 
-const { white, darkBlue, skyBlue } = colors;
+const { darkBlue, skyBlue } = colors;
 
 export const MissionMapContainer = styled.div`
-  padding: 1rem;
-
   ${({ css }) => css}
 `;
 
 export const MissionMapChart = styled.div`
   height: 100%;
   width: 100%;
-`;
-
-export const ModalContainer = styled(Modal)`
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const ModalContent = styled.div`
-  height: 750px;
-  width: 1200px;
-  background: ${white};
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 1rem;
-  outline: none;
-  position: relative;
-
-  .close-icon-container {
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    cursor: pointer;
-
-    .close-icon {
-      height: 30px;
-      width: 30px;
-    }
-  }
 `;
 
 export const ModalContentUp = styled.div`
@@ -64,6 +27,7 @@ export const ModalView = styled.div`
 `;
 
 export const ModalViewImage = styled.img`
+  height: inherit;
   width: 100%;
 `;
 
@@ -128,7 +92,7 @@ export const ModalContentDown = styled.div`
 export const ModalSlide = styled.div`
   width: 300px;
   display: flex;
-  margin: 2rem 1rem;
+  margin: 1.5rem 1rem;
   cursor: pointer;
 
   &:first-child {
@@ -141,5 +105,6 @@ export const ModalSlide = styled.div`
 `;
 
 export const ModalSlideImage = styled.img`
+  height: inherit;
   width: 100%;
 `;

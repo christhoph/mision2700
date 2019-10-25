@@ -22,16 +22,3 @@ export const EyeClipIconContainer = styled.div`
 
   ${({ css }) => css}
 `;
-
-export const EyeClipIconButtons = styled.div`
-  height: ${({ iconSize }) => iconSize / 4}px;
-  width: 2px;
-  background: ${({ iconColor }) => iconColor};
-  position: absolute;
-  top: ${({ iconSize }) => iconSize / 6.5}px;
-  right: -2px;
-
-  &:nth-child(2) {
-    top: ${({ iconSize }) => (iconSize / 6.5) * 3.5}px;
-  }
-`;

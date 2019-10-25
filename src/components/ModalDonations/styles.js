@@ -1,54 +1,20 @@
 import styled from "styled-components";
-import Modal from "@material-ui/core/Modal";
 
 import { colors, convertHexToRgba } from "../../core";
 
 const { white, darkBlue, skyBlue } = colors;
-
-export const ModalDonationsContainer = styled(Modal)`
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const ModalContent = styled.div`
-  height: 750px;
-  width: 1200px;
-  background: ${white};
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 1rem;
-  outline: none;
-  position: relative;
-
-  .close-icon-container {
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    cursor: pointer;
-
-    .close-icon {
-      height: 30px;
-      width: 30px;
-    }
-  }
-`;
 
 export const DonationCard = styled.div`
   height: 480px;
   width: 300px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  border: 1px solid darkBlue;
+  border: 1px solid ${darkBlue};
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 2rem 1rem;
+  margin: 1rem;
 `;
 
 export const DonationCardTitle = styled.h4`

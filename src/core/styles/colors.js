@@ -9,8 +9,9 @@ export const colors = {
   yellow: "#fbbd08",
   olive: "#b5cc18",
   green: "#21ba45",
+  donateGreen: "#00b964",
   teal: "#00b5ad",
   blue: "#2185d0",
   indigo: "#6610f2",
-  whatsappColor: "#25d366",
+  whatsappColor: "#25d366"
 };

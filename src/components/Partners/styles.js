@@ -8,7 +8,7 @@ export const PartnersContainer = styled.div`
   width: 100%;
   background: url(${dotBg}) 0 0 repeat;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 3rem;
 `;
 

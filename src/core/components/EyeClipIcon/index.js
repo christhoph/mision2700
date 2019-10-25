@@ -1,12 +1,9 @@
 import React from "react";
 
-import { EyeClipIconContainer, EyeClipIconButtons } from "./styles";
+import { EyeClipIconContainer } from "./styles";
 
 const EyeClipIcon = ({ css, iconSize, iconColor }) => (
-  <EyeClipIconContainer css={css} iconSize={iconSize} iconColor={iconColor}>
-    <EyeClipIconButtons iconSize={iconSize} iconColor={iconColor} />
-    <EyeClipIconButtons iconSize={iconSize} iconColor={iconColor} />
-  </EyeClipIconContainer>
+  <EyeClipIconContainer css={css} iconSize={iconSize} iconColor={iconColor} />
 );
 EyeClipIcon.defaultProps = {
   css: "",

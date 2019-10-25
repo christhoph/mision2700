@@ -1,12 +1,10 @@
 import React, { useState, useCallback, useEffect } from "react";
 
-import { SVGIcons, EyeClipIcon, colors } from "../../core";
+import { SVGIcons, EyeClipIcon, Modal, colors } from "../../core";
 import { setChart } from "./setChart";
 import {
   MissionMapContainer,
   MissionMapChart,
-  ModalContainer,
-  ModalContent,
   ModalContentUp,
   ModalView,
   ModalViewImage,
@@ -75,53 +73,51 @@ const MissionMap = ({ containerCss }) => {
   return (
     <MissionMapContainer css={containerCss}>
       <MissionMapChart id="chartdiv" />
-      <ModalContainer open={openModal} onClose={toggleOpenModal}>
-        <ModalContent>
-          <SVGIcons
-            wrapperClass="close-icon-container"
-            iconClass="close-icon"
-            iconName="close_icon"
-            iconAction={toggleOpenModal}
-          />
-          <ModalContentUp>
-            <ModalView>
-              <ModalViewImage src={showSlide.src} alt="modal_view" />
-            </ModalView>
-            <ModalInfo>
-              <ModalInfoTitle>{citySelected.name}</ModalInfoTitle>
-              <ModalInfoContent>
-                <ModalInfoContentItem>
-                  <SVGIcons
-                    wrapperClass="modal-info-icon-container"
-                    iconClass="modal-info-icon"
-                    iconName="blind_person_icon"
-                  />
-                  <span>300 </span>
-                  <p>Personas No Videntes</p>
-                </ModalInfoContentItem>
-                <ModalInfoContentItem>
-                  <EyeClipIcon
-                    css={`
-                      margin-right: 1rem;
-                    `}
-                    iconSize={28}
-                    iconColor={skyBlue}
-                  />
-                  <span>100</span>
-                  <p>No Videntes Beneficiados</p>
-                </ModalInfoContentItem>
-              </ModalInfoContent>
-            </ModalInfo>
-          </ModalContentUp>
-          <ModalContentDown>
-            {modalSlider.map(({ id, src }) => (
-              <ModalSlide key={id} onClick={handleSetShowSlide(id)}>
-                <ModalSlideImage src={src} alt="modal_slide" />
-              </ModalSlide>
-            ))}
-          </ModalContentDown>
-        </ModalContent>
-      </ModalContainer>
+      <Modal
+        open={openModal}
+        onClose={toggleOpenModal}
+        css={`
+          flex-direction: column;
+        `}
+      >
+        <ModalContentUp>
+          <ModalView>
+            <ModalViewImage src={showSlide.src} alt="modal_view" />
+          </ModalView>
+          <ModalInfo>
+            <ModalInfoTitle>{citySelected.name}</ModalInfoTitle>
+            <ModalInfoContent>
+              <ModalInfoContentItem>
+                <SVGIcons
+                  wrapperClass="modal-info-icon-container"
+                  iconClass="modal-info-icon"
+                  iconName="blind_person_icon"
+                />
+                <span>300 </span>
+                <p>Personas con Discapacidad Visual</p>
+              </ModalInfoContentItem>
+              <ModalInfoContentItem>
+                <EyeClipIcon
+                  css={`
+                    margin-right: 1rem;
+                  `}
+                  iconSize={28}
+                  iconColor={skyBlue}
+                />
+                <span>100</span>
+                <p>Personas Beneficiadas</p>
+              </ModalInfoContentItem>
+            </ModalInfoContent>
+          </ModalInfo>
+        </ModalContentUp>
+        <ModalContentDown>
+          {modalSlider.map(({ id, src }) => (
+            <ModalSlide key={id} onClick={handleSetShowSlide(id)}>
+              <ModalSlideImage src={src} alt="modal_slide" />
+            </ModalSlide>
+          ))}
+        </ModalContentDown>
+      </Modal>
     </MissionMapContainer>
   );
 };

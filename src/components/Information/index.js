@@ -5,10 +5,9 @@ import {
   InformationTitle,
   InformationContent,
   InformationContentItem,
-  DonationsCounter,
   DonateButton
 } from "./styles";
-import { SVGIcons, EyeClipIcon, colors } from "../../core";
+import { SVGIcons, EyeClipIcon, Divider, colors } from "../../core";
 import ModalDonations from "../ModalDonations";
 
 const { skyBlue } = colors;
@@ -46,15 +45,12 @@ const Information = ({ containerCss }) => {
             iconSize={28}
             iconColor={skyBlue}
           />
-          <span>105</span> Beneficiarios
+          <span>105</span> Beneficiados
         </InformationContentItem>
       </InformationContent>
-      <InformationTitle>DONACIONES</InformationTitle>
+      <Divider />
       <InformationContent css="align-items: center;">
-        <DonationsCounter>200,000</DonationsCounter>
-        <DonateButton onClick={toggleOpenModal}>
-          Ayúdanos con tu donación
-        </DonateButton>
+        <DonateButton onClick={toggleOpenModal}>DONA</DonateButton>
       </InformationContent>
       <ModalDonations open={openModal} onClose={toggleOpenModal} />
     </InformationContainer>
