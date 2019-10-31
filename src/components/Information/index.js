@@ -12,7 +12,7 @@ import ModalDonations from "../ModalDonations";
 
 const { skyBlue } = colors;
 
-const Information = ({ containerCss }) => {
+const Information = ({ containerCss, visitCities }) => {
   const [openModal, setOpenModal] = useState(false);
 
   const toggleOpenModal = useCallback(() => setOpenModal(val => !val), []);
@@ -35,7 +35,7 @@ const Information = ({ containerCss }) => {
             iconClass="info-icon"
             iconName="map_icon"
           />
-          <span>15</span> Ciudades
+          <span>{visitCities}</span> Ciudades
         </InformationContentItem>
         <InformationContentItem>
           <EyeClipIcon
@@ -55,6 +55,9 @@ const Information = ({ containerCss }) => {
       <ModalDonations open={openModal} onClose={toggleOpenModal} />
     </InformationContainer>
   );
+};
+Information.defaultProps = {
+  visitCities: 0
 };
 
 export default Information;

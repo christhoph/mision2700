@@ -44,12 +44,12 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   ::-webkit-scrollbar-track {
-    background: $white;
+    background: ${white};
     border: 0 none transparent;
   }
 
   ::-webkit-scrollbar-track:hover {
-    background: $white;
+    background: ${white};
   }
 
   ::-webkit-scrollbar-corner {

@@ -4,8 +4,9 @@ import am4geodata_ecuadorLow from "@amcharts/amcharts4-geodata/ecuadorLow";
 
 import { SVGS } from "../../core";
 
-export const setChart = (toggleOpenModal, handleSetCitySelected) => {
+export const setChart = (provinces, toggleOpenModal, handleSetCitySelected) => {
   const { map_marker_path, car_path } = SVGS;
+  console.log("provinces: ", provinces);
 
   let chart = am4core.create("chartdiv", am4maps.MapChart);
   chart.geodata = am4geodata_ecuadorLow;
@@ -26,128 +27,7 @@ export const setChart = (toggleOpenModal, handleSetCitySelected) => {
     .lighten(0.5);
   polygonSeries.mapPolygons.template.nonScalingStroke = true;
 
-  polygonSeries.data = [
-    {
-      // Azuay
-      id: "EC-A",
-      value: 100
-    },
-    {
-      // Bolivar
-      id: "EC-B",
-      value: 110
-    },
-    {
-      // Carchi
-      id: "EC-C",
-      value: 120
-    },
-    {
-      // Orellana
-      id: "EC-D",
-      value: 130
-    },
-    {
-      // Esmeraldas
-      id: "EC-E",
-      value: 140
-    },
-    {
-      // Cañar
-      id: "EC-F",
-      value: 150
-    },
-    {
-      // Guayas
-      id: "EC-G",
-      value: 160
-    },
-    {
-      // Chimborazo
-      id: "EC-H",
-      value: 170
-    },
-    {
-      // Imbabura
-      id: "EC-I",
-      value: 180
-    },
-    {
-      // Loja
-      id: "EC-L",
-      value: 190
-    },
-    {
-      // Manabi
-      id: "EC-M",
-      value: 200
-    },
-    {
-      // Napo
-      id: "EC-N",
-      value: 210
-    },
-    {
-      // El Oro
-      id: "EC-O",
-      value: 220
-    },
-    {
-      // Pichincha
-      id: "EC-P",
-      value: 230
-    },
-    {
-      // Los Rios
-      id: "EC-R",
-      value: 240
-    },
-    {
-      // Morona Santiago
-      id: "EC-S",
-      value: 250
-    },
-    {
-      // Santo Domingo de los Tsáchilas
-      id: "EC-SD",
-      value: 260
-    },
-    {
-      // Santa Elena
-      id: "EC-SE",
-      value: 270
-    },
-    {
-      // Tungurahua
-      id: "EC-T",
-      value: 280
-    },
-    {
-      // Sucumbios
-      id: "EC-U",
-      value: 290
-    },
-    {
-      // Galapagos
-      id: "EC-W",
-      value: 300
-    },
-    {
-      // Cotopaxi
-      id: "EC-X",
-      value: 310
-    },
-    {
-      // Pastaza
-      id: "EC-Y",
-      value: 320
-    },
-    {
-      // Zamora Chinchipe
-      id: "EC-Z",
-      value: 330
-    }
-  ];
+  polygonSeries.data = provinces;
 
   var polygonTemplate = polygonSeries.mapPolygons.template;
   polygonTemplate.tooltipText = `{name}\n

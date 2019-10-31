@@ -52,7 +52,7 @@ const modalSlider = [
   }
 ];
 
-const MissionMap = ({ containerCss }) => {
+const MissionMap = ({ containerCss, allStates, states }) => {
   const [openModal, setOpenModal] = useState(false);
   const [citySelected, setCitySelected] = useState(initialState);
   const [showSlide, setShowSlide] = useState(modalSlider[0]);
@@ -64,11 +64,27 @@ const MissionMap = ({ containerCss }) => {
     []
   );
 
+  const setAllStates =
+    allStates && allStates.map(({ map_id, value }) => ({ id: map_id, value }));
+
+  console.log("states: ", states);
+  const getCity =
+    states &&
+    states
+      .map(({ cities }) =>
+        cities.reduce((prev, curr) => ({ ...prev, ...curr }), null)
+      )
+      .find(({ name }) => name === citySelected.name);
+
   useEffect(() => {
-    const chart = setChart(toggleOpenModal, handleSetCitySelected);
+    const chart = setChart(
+      setAllStates,
+      toggleOpenModal,
+      handleSetCitySelected
+    );
 
     return () => chart.dispose();
-  }, [toggleOpenModal, handleSetCitySelected]);
+  }, [setAllStates, toggleOpenModal, handleSetCitySelected]);
 
   return (
     <MissionMapContainer css={containerCss}>
@@ -93,7 +109,7 @@ const MissionMap = ({ containerCss }) => {
                   iconClass="modal-info-icon"
                   iconName="blind_person_icon"
                 />
-                <span>300 </span>
+                <span>{getCity && getCity.men + getCity.women} </span>
                 <p>Personas con Discapacidad Visual</p>
               </ModalInfoContentItem>
               <ModalInfoContentItem>
@@ -104,7 +120,7 @@ const MissionMap = ({ containerCss }) => {
                   iconSize={28}
                   iconColor={skyBlue}
                 />
-                <span>100</span>
+                <span>{getCity && getCity.beneficiaries}</span>
                 <p>Personas Beneficiadas</p>
               </ModalInfoContentItem>
             </ModalInfoContent>
@@ -120,6 +136,10 @@ const MissionMap = ({ containerCss }) => {
       </Modal>
     </MissionMapContainer>
   );
+};
+MissionMap.defaultProps = {
+  allStates: [],
+  states: []
 };
 
 export default MissionMap;
