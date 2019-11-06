@@ -41,7 +41,7 @@ export const disVisual = {
           men: 130,
           beneficiaries: 7,
           coords: { latitude: -0.255764, longitude: -79.174124 },
-          position: 14
+          position: 15
         }
       ]
     },
@@ -59,7 +59,8 @@ export const disVisual = {
           women: 16,
           men: 26,
           beneficiaries: 7,
-          coords: { latitude: 0.068226, longitude: -80.044485 }
+          coords: { latitude: 0.068226, longitude: -80.044485 },
+          position: 3
         },
         {
           id: "c-06",
@@ -68,7 +69,7 @@ export const disVisual = {
           men: 119,
           beneficiaries: 7,
           coords: { latitude: -1.055685, longitude: -80.451366 },
-          position: 3
+          position: 4
         }
       ]
     },
@@ -95,7 +96,7 @@ export const disVisual = {
           men: 543,
           beneficiaries: 7,
           coords: { latitude: -2.195601, longitude: -79.883435 },
-          position: 4
+          position: 5
         }
       ]
     },
@@ -122,7 +123,7 @@ export const disVisual = {
           men: 61,
           beneficiaries: 7,
           coords: { latitude: -3.258923, longitude: -79.955163 },
-          position: 5
+          position: 6
         }
       ]
     },
@@ -168,7 +169,7 @@ export const disVisual = {
           men: 562,
           beneficiaries: 7,
           coords: { latitude: -0.091251, longitude: -78.429166 },
-          position: 15
+          position: 16
         }
       ]
     },
@@ -187,7 +188,7 @@ export const disVisual = {
           men: 43,
           beneficiaries: 7,
           coords: { latitude: -0.931815, longitude: -78.604514 },
-          position: 13
+          position: 14
         }
       ]
     },
@@ -206,7 +207,7 @@ export const disVisual = {
           men: 77,
           beneficiaries: 7,
           coords: { latitude: -1.253755, longitude: -78.619298 },
-          position: 12
+          position: 13
         }
       ]
     },
@@ -233,7 +234,7 @@ export const disVisual = {
           men: 80,
           beneficiaries: 7,
           coords: { latitude: -1.656577, longitude: -78.657716 },
-          position: 10
+          position: 11
         }
       ]
     },
@@ -260,7 +261,7 @@ export const disVisual = {
           men: 195,
           beneficiaries: 7,
           coords: { latitude: -2.900074, longitude: -79.0059 },
-          position: 8
+          position: 9
         }
       ]
     },
@@ -279,7 +280,7 @@ export const disVisual = {
           men: 79,
           beneficiaries: 7,
           coords: { latitude: -4.008082, longitude: -79.210965 },
-          position: 6
+          position: 7
         }
       ]
     },
@@ -333,7 +334,7 @@ export const disVisual = {
           men: 5,
           beneficiaries: 7,
           coords: { latitude: -1.49319, longitude: -77.999795 },
-          position: 11
+          position: 12
         }
       ]
     },
@@ -352,7 +353,7 @@ export const disVisual = {
           men: 12,
           beneficiaries: 7,
           coords: { latitude: -2.307021, longitude: -78.118286 },
-          position: 9
+          position: 10
         }
       ]
     },
@@ -371,7 +372,7 @@ export const disVisual = {
           men: 21,
           beneficiaries: 7,
           coords: { latitude: -4.062284, longitude: -78.94814 },
-          position: 7
+          position: 8
         }
       ]
     },

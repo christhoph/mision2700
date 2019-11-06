@@ -70,6 +70,7 @@ const MissionMap = ({ containerCss, allStates, states }) => {
     allStates && allStates.map(({ map_id, value }) => ({ id: map_id, value }));
 
   console.log("states: ", states);
+  console.log("disVisual: ", disVisual.states);
 
   // El metodo filter() es solo por la data local
   // Cuando se tenga la data desde la API se debe remover el metodo filter()
