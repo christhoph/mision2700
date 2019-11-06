@@ -84,13 +84,12 @@ const MissionMap = ({ containerCss, allStates, states }) => {
 
   console.log("getCities: ", getCities);
 
-  const getCity =
-    states &&
-    states
-      .map(({ cities }) =>
-        cities.reduce((prev, curr) => ({ ...prev, ...curr }), null)
-      )
-      .find(({ name }) => name === citySelected.name);
+  const getCity = disVisual.states
+    .filter(({ cities }) => cities && cities.length)
+    .map(({ cities }) =>
+      cities.reduce((prev, curr) => ({ ...prev, ...curr }), null)
+    )
+    .find(({ name }) => name === citySelected.name);
 
   useEffect(() => {
     const chart = setChart(
