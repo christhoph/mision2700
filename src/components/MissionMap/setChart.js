@@ -4,7 +4,12 @@ import am4geodata_ecuadorLow from "@amcharts/amcharts4-geodata/ecuadorLow";
 
 import { SVGS } from "../../core";
 
-export const setChart = (provinces, toggleOpenModal, handleSetCitySelected) => {
+export const setChart = (
+  provinces,
+  toggleOpenModal,
+  handleSetCitySelected,
+  citiesData
+) => {
   const { map_marker_path, car_path } = SVGS;
   console.log("provinces: ", provinces);
 
@@ -68,65 +73,9 @@ export const setChart = (provinces, toggleOpenModal, handleSetCitySelected) => {
     return city;
   };
 
-  const ibarra = addCity(
-    { latitude: 0.346642, longitude: -78.130284 },
-    "Ibarra"
-  );
-  const esmeraldas = addCity(
-    { latitude: 0.968094, longitude: -79.647516 },
-    "Esmeraldas"
-  );
-  const pedernales = addCity(
-    { latitude: 0.068226, longitude: -80.044485 },
-    "Pedernales"
-  );
-  const portoviejo = addCity(
-    { latitude: -1.055685, longitude: -80.451366 },
-    "Portoviejo"
-  );
-  const guayaquil = addCity(
-    { latitude: -2.195601, longitude: -79.883435 },
-    "Guayaquil"
-  );
-  const machala = addCity(
-    { latitude: -3.258923, longitude: -79.955163 },
-    "Machala"
-  );
-  const loja = addCity({ latitude: -4.008082, longitude: -79.210965 }, "Loja");
-  const zamora = addCity(
-    { latitude: -4.062284, longitude: -78.94814 },
-    "Zamora"
-  );
-  const cuenca = addCity(
-    { latitude: -2.900074, longitude: -79.0059 },
-    "Cuenca"
-  );
-  const macas = addCity(
-    { latitude: -2.307021, longitude: -78.118286 },
-    "Macas"
-  );
-  const riobamba = addCity(
-    { latitude: -1.656577, longitude: -78.657716 },
-    "Riobamba"
-  );
-  const puyo = addCity({ latitude: -1.49319, longitude: -77.999795 }, "Puyo");
-  const tena = addCity({ latitude: -0.996186, longitude: -77.812471 }, "Tena");
-  const ambato = addCity(
-    { latitude: -1.253755, longitude: -78.619298 },
-    "Ambato"
-  );
-  const latacunga = addCity(
-    { latitude: -0.931815, longitude: -78.604514 },
-    "Latacunga"
-  );
-  const santoDomingo = addCity(
-    { latitude: -0.255764, longitude: -79.174124 },
-    "Santo Domingo"
-  );
-  const quito = addCity(
-    { latitude: -0.091251, longitude: -78.429166 },
-    "Quito"
-  );
+  // Agregamos las ciudades para mostrar el icono marker en el mapa
+  // Pasamos a la funccion addCity() las coordenadas y el nombre de la ciudad
+  const setCities = citiesData.map(({ name, coords }) => addCity(coords, name));
 
   let lineSeries = chart.series.push(new am4maps.MapArcSeries());
   lineSeries.mapLines.template.line.strokeWidth = 2;
@@ -152,22 +101,12 @@ export const setChart = (provinces, toggleOpenModal, handleSetCitySelected) => {
     return line;
   };
 
-  addLine(ibarra, esmeraldas);
-  addLine(esmeraldas, pedernales);
-  addLine(pedernales, portoviejo);
-  addLine(portoviejo, guayaquil);
-  addLine(guayaquil, machala);
-  addLine(machala, loja);
-  addLine(loja, zamora);
-  addLine(zamora, cuenca);
-  addLine(cuenca, macas);
-  addLine(macas, riobamba);
-  addLine(riobamba, puyo);
-  addLine(puyo, tena);
-  addLine(tena, ambato);
-  addLine(ambato, latacunga);
-  addLine(latacunga, santoDomingo);
-  addLine(santoDomingo, quito);
+  // Agregamos las lineas entre los iconos de cada ciudad
+  // Estas lineas sirven para la animacion del icono del auto
+  setCities.map(
+    (_, i) =>
+      i < setCities.length - 1 && addLine(setCities[i], setCities[i + 1])
+  );
 
   let car = lineSeries.mapLines.getIndex(0).lineObjects.create();
   car.position = 0;

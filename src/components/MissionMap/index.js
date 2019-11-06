@@ -17,6 +17,8 @@ import {
   ModalSlideImage
 } from "./styles";
 
+import { disVisual } from "./data";
+
 const { skyBlue } = colors;
 
 const initialState = {
@@ -68,6 +70,19 @@ const MissionMap = ({ containerCss, allStates, states }) => {
     allStates && allStates.map(({ map_id, value }) => ({ id: map_id, value }));
 
   console.log("states: ", states);
+
+  // El metodo filter() es solo por la data local
+  // Cuando se tenga la data desde la API se debe remover el metodo filter()
+  // y usar el prop states, para obtener las ciudad
+  const getCities = disVisual.states
+    .filter(({ cities }) => cities && cities.length)
+    .map(({ cities }) =>
+      cities.reduce((prev, curr) => ({ ...prev, ...curr }), null)
+    )
+    .sort((a, b) => (a.position > b.position ? 1 : -1));
+
+  console.log("getCities: ", getCities);
+
   const getCity =
     states &&
     states
@@ -80,11 +95,12 @@ const MissionMap = ({ containerCss, allStates, states }) => {
     const chart = setChart(
       setAllStates,
       toggleOpenModal,
-      handleSetCitySelected
+      handleSetCitySelected,
+      getCities
     );
 
     return () => chart.dispose();
-  }, [setAllStates, toggleOpenModal, handleSetCitySelected]);
+  }, [setAllStates, toggleOpenModal, handleSetCitySelected, getCities]);
 
   return (
     <MissionMapContainer css={containerCss}>
