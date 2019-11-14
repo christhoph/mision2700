@@ -74,9 +74,12 @@ export const DonationInput = styled.input`
   text-transform: linear;
 `;
 
-export const DonationButton = styled.button`
+export const DonationButton = styled.a`
   width: 200px;
   background-color: ${skyBlue};
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
   padding: 1rem 0;
   color: ${white};

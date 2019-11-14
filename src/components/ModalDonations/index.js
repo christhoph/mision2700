@@ -12,6 +12,8 @@ import {
 } from "./styles";
 import { Modal } from "../../core";
 
+const paypal = "https://www.paypal.me/HANDEYES/";
+
 const ModalDonations = ({ open, onClose }) => {
   const [count, setCount] = useState(1);
   const [price, setPrice] = useState(1);
@@ -42,7 +44,7 @@ const ModalDonations = ({ open, onClose }) => {
     >
       <DonationCard>
         <DonationCardTitle>Dispositivo EyeClip</DonationCardTitle>
-        <DonationCardPrice>{`$${150 * count}`}</DonationCardPrice>
+        <DonationCardPrice>{`$${200 * count}`}</DonationCardPrice>
         <DonationCounter>
           <DonationCounterButton onClick={handleSetCount(count - 1)}>
             -
@@ -59,7 +61,13 @@ const ModalDonations = ({ open, onClose }) => {
             +
           </DonationCounterButton>
         </DonationCounter>
-        <DonationButton>Donar</DonationButton>
+        <DonationButton
+          href={`${paypal}${200 * count}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Donar
+        </DonationButton>
       </DonationCard>
       <DonationCard>
         <DonationCardTitle>Cantidad Deseada</DonationCardTitle>
@@ -71,7 +79,13 @@ const ModalDonations = ({ open, onClose }) => {
             onChange={handleOnChangePrice}
           />
         </DonationInputWrapper>
-        <DonationButton>Donar</DonationButton>
+        <DonationButton
+          href={`${paypal}${price}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Donar
+        </DonationButton>
       </DonationCard>
     </Modal>
   );
