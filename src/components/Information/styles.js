@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { colors } from "../../core";
 
-const { darkBlue, skyBlue, white, donateGreen } = colors;
+const { darkBlue, skyBlue } = colors;
 
 export const InformationContainer = styled.div`
   display: flex;
@@ -51,15 +51,4 @@ export const InformationContentItem = styled.div`
       fill: ${skyBlue};
     }
   }
-`;
-
-export const DonateButton = styled.button`
-  background: ${donateGreen};
-  border: 2px solid ${donateGreen};
-  border-radius: 5px;
-  padding: 0.75rem 1.5rem;
-  margin: 1rem 0;
-  color: ${white};
-  font-size: 1.1rem;
-  letter-spacing: 0.05rem;
 `;

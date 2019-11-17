@@ -1,10 +1,16 @@
 import React from "react";
 
-import { PartnersContainer, PartnerSite, PartnerImage } from "./styles";
+import {
+  PartnersContainer,
+  PartnerSite,
+  PartnerImage,
+  PartnersHashtag
+} from "./styles";
 import { ContentSize } from "../../core";
 
 const Partners = () => (
   <PartnersContainer>
+    <PartnersHashtag>#YAMESUME</PartnersHashtag>
     <ContentSize
       css={`
         justify-content: space-evenly;

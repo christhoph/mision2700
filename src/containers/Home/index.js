@@ -1,19 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import axios from "axios";
 
-import { HomeContainer } from "./styles";
+import {
+  HomeContainer,
+  HomeTitleContainer,
+  HomeTitle,
+  DonateButtonContainer,
+  DonateButton
+} from "./styles";
 import { ContentSize } from "../../core";
-import YearsBar from "../../components/YearsBar";
 import MissionMap from "../../components/MissionMap";
 import Information from "../../components/Information";
 import AboutMission from "../../components/AboutMission";
 import Partners from "../../components/Partners";
-import BlindPersonForm from "../../components/BlindPersonForm";
 
-const URL_API = process.env.REACT_APP_MISSIONS_API;
+const URL_API = "http://ec2-3-19-209-147.us-east-2.compute.amazonaws.com:8080";
 
 const Home = () => {
   const [mission, setMission] = useState({});
+  const [openModal, setOpenModal] = useState(false);
+
+  const toggleOpenModal = useCallback(() => setOpenModal(val => !val), []);
 
   useEffect(() => {
     axios(`${URL_API}/missions/`).then(res => {
@@ -24,16 +31,20 @@ const Home = () => {
     });
   }, []);
 
-  console.log("mission: ", mission);
-
   const filterStates =
     mission &&
     mission.states &&
     mission.states.filter(({ cities }) => cities && cities.length);
 
+  const renderDonateButton = (
+    <DonateButton onClick={toggleOpenModal}>DONA</DonateButton>
+  );
+
   return (
     <HomeContainer>
-      <YearsBar />
+      <HomeTitleContainer>
+        <HomeTitle>Misión 2700</HomeTitle>
+      </HomeTitleContainer>
       <ContentSize>
         <MissionMap
           containerCss="width: 60%;"
@@ -43,11 +54,14 @@ const Home = () => {
         <Information
           containerCss="width: 40%;"
           visitCities={filterStates && filterStates.length}
+          openModal={openModal}
+          toggleOpenModal={toggleOpenModal}
+          renderDonateButton={renderDonateButton}
         />
       </ContentSize>
       <AboutMission />
       <Partners />
-      <BlindPersonForm />
+      <DonateButtonContainer>{renderDonateButton}</DonateButtonContainer>
     </HomeContainer>
   );
 };

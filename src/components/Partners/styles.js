@@ -8,8 +8,20 @@ export const PartnersContainer = styled.div`
   width: 100%;
   background: url(${dotBg}) 0 0 repeat;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 3rem;
+`;
+
+export const PartnersHashtag = styled.h2`
+  @import url("https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap");
+
+  margin-bottom: 3rem;
+
+  font-family: "Nothing You Could Do", cursive;
+  font-size: 3rem;
+  font-style: italic;
+  font-weigt: bolder;
 `;
 
 export const PartnerSite = styled.a`

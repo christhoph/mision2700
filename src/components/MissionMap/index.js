@@ -69,9 +69,6 @@ const MissionMap = ({ containerCss, allStates, states }) => {
   const setAllStates =
     allStates && allStates.map(({ map_id, value }) => ({ id: map_id, value }));
 
-  console.log("states: ", states);
-  console.log("disVisual: ", disVisual.states);
-
   // El metodo filter() es solo por la data local
   // Cuando se tenga la data desde la API se debe remover el metodo filter()
   // y usar el prop states, para obtener las ciudad
@@ -81,8 +78,6 @@ const MissionMap = ({ containerCss, allStates, states }) => {
       cities.reduce((prev, curr) => ({ ...prev, ...curr }), null)
     )
     .sort((a, b) => (a.position > b.position ? 1 : -1));
-
-  console.log("getCities: ", getCities);
 
   const getCity = disVisual.states
     .filter(({ cities }) => cities && cities.length)

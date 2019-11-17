@@ -10,8 +10,7 @@ export const setChart = (
   handleSetCitySelected,
   citiesData
 ) => {
-  const { map_marker_path, car_path } = SVGS;
-  console.log("provinces: ", provinces);
+  const { map_marker_path } = SVGS;
 
   let chart = am4core.create("chartdiv", am4maps.MapChart);
   chart.geodata = am4geodata_ecuadorLow;
@@ -74,7 +73,7 @@ export const setChart = (
   };
 
   // Agregamos las ciudades para mostrar el icono marker en el mapa
-  // Pasamos a la funccion addCity() las coordenadas y el nombre de la ciudad
+  // Pasamos a la funcion addCity() las coordenadas y el nombre de la ciudad
   const setCities = citiesData.map(({ name, coords }) => addCity(coords, name));
 
   let lineSeries = chart.series.push(new am4maps.MapArcSeries());
@@ -107,46 +106,6 @@ export const setChart = (
     (_, i) =>
       i < setCities.length - 1 && addLine(setCities[i], setCities[i + 1])
   );
-
-  let car = lineSeries.mapLines.getIndex(0).lineObjects.create();
-  car.position = 0;
-  car.width = 512;
-  car.height = 512;
-
-  let carImage = car.createChild(am4core.Sprite);
-  carImage.scale = 0.025;
-  carImage.horizontalCenter = "middle";
-  carImage.verticalCenter = "middle";
-  carImage.path = car_path;
-  carImage.fill = chart.colors.getIndex(2).brighten(-0.2);
-  carImage.strokeOpacity = 0;
-
-  const direction = 1;
-  let currentLine = 0;
-
-  const driveCar = () => {
-    car.mapLine = lineSeries.mapLines.getIndex(currentLine);
-    car.parent = lineSeries;
-
-    if (carImage.rotation !== 270) {
-      carImage
-        .animate({ to: 270, property: "rotation" }, 1000)
-        .events.on("animationended", driveCar);
-      return;
-    }
-
-    let animation = car.animate(
-      { from: 0, to: 1, property: "position" },
-      2000,
-      am4core.ease.sinInOut
-    );
-    animation.events.on("animationended", driveCar);
-
-    currentLine += direction;
-    if (currentLine + 1 > lineSeries.mapLines.length) currentLine = 0;
-  };
-
-  driveCar();
 
   return chart;
 };
