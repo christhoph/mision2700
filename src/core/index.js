@@ -9,6 +9,7 @@ import ContentSize from "./components/ContentSize";
 import Divider from "./components/Divider";
 import Modal from "./components/Modal";
 import ScrollableContainer from "./components/ScrollableContainer";
+import VideoVimeo from "./components/VideoVimeo";
 
 export {
   Navbar,
@@ -20,7 +21,8 @@ export {
   ContentSize,
   Divider,
   Modal,
-  ScrollableContainer
+  ScrollableContainer,
+  VideoVimeo
 };
 
 // styles for styled-components

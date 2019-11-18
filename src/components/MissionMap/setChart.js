@@ -8,7 +8,8 @@ export const setChart = (
   provinces,
   toggleOpenModal,
   handleSetCitySelected,
-  citiesData
+  citiesData,
+  states
 ) => {
   const { map_marker_path } = SVGS;
 
@@ -34,6 +35,7 @@ export const setChart = (
   polygonSeries.data = provinces;
 
   var polygonTemplate = polygonSeries.mapPolygons.template;
+  // polygonTemplate.fill = am4core.color("#eee");
   polygonTemplate.tooltipText = `{name}\n
     Personas con
     Discapacidad Visual: {value}
@@ -42,6 +44,15 @@ export const setChart = (
   polygonTemplate.strokeWidth = 0.5;
   var hs = polygonTemplate.states.create("hover");
   hs.properties.fill = am4core.color("#3c5bdc");
+  polygonTemplate.events.on("hit", e => {
+    const selectName = e.target.dataItem.dataContext.name;
+    console.log("selectName: ", selectName);
+    toggleOpenModal();
+    // handleSetCitySelected({
+    //   id: polygonTemplate.name,
+    //   name: polygonTemplate.name
+    // });
+  });
 
   let cities = chart.series.push(new am4maps.MapImageSeries());
   cities.mapImages.template.nonScaling = true;

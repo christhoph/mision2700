@@ -16,7 +16,7 @@ const paypal = "https://www.paypal.me/HANDEYES/";
 
 const ModalDonations = ({ open, onClose }) => {
   const [count, setCount] = useState(1);
-  const [price, setPrice] = useState(1);
+  const [price, setPrice] = useState(0);
 
   const handleSetCount = useCallback(
     val => () => setCount(val < 1 ? 1 : val),
@@ -29,8 +29,11 @@ const ModalDonations = ({ open, onClose }) => {
   );
 
   const handleOnChangePrice = useCallback(
-    ({ target: { value } }) => setPrice(value === "" ? 1 : parseInt(value, 10)),
-    []
+    ({ target: { value } }) =>
+      setPrice(
+        Number.isInteger(parseInt(value, 10)) ? parseInt(value, 10) : price
+      ),
+    [price]
   );
 
   return (

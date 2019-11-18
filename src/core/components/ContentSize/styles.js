@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { contentSizeBreakpoints, breakpoints } from "../../constants";
 
 export const ContentSizeContainer = styled.div`
-  height: 100%;
   min-width: ${contentSizeBreakpoints.lg}px;
   max-width: ${contentSizeBreakpoints.lg}px;
   display: flex;

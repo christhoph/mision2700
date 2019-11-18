@@ -5,10 +5,9 @@ import {
   AboutMissionInfo,
   AboutMissionInfoTitle,
   AboutMissionInfoText,
-  AboutMissionVideo,
-  AboutMissionVideoImg
+  AboutMissionVideo
 } from "./styles";
-import { ContentSize, SVGIcons } from "../../core";
+import { ContentSize, VideoVimeo } from "../../core";
 
 const AboutMission = () => (
   <AboutMissionContainer>
@@ -28,15 +27,7 @@ const AboutMission = () => (
         </AboutMissionInfoText>
       </AboutMissionInfo>
       <AboutMissionVideo>
-        <SVGIcons
-          wrapperClass="play-icon-container"
-          iconClass="play-icon"
-          iconName="play_icon"
-        />
-        <AboutMissionVideoImg
-          src="https://storage.googleapis.com/flexbox-180917.appspot.com/mision2700/handeyesvideo.png"
-          alt="mision 2700"
-        />
+        <VideoVimeo video={373764053} />
       </AboutMissionVideo>
     </ContentSize>
   </AboutMissionContainer>

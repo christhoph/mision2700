@@ -91,7 +91,8 @@ const MissionMap = ({ containerCss, allStates, states }) => {
       setAllStates,
       toggleOpenModal,
       handleSetCitySelected,
-      getCities
+      getCities,
+      disVisual.states
     );
 
     return () => chart.dispose();
@@ -99,6 +100,11 @@ const MissionMap = ({ containerCss, allStates, states }) => {
 
   return (
     <MissionMapContainer css={containerCss}>
+      <SVGIcons
+        wrapperClass="city-arrow-icon-container"
+        iconClass="city-arrow-icon"
+        iconName="city_arrow_icon"
+      />
       <MissionMapChart id="chartdiv" />
       <Modal
         open={openModal}

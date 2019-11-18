@@ -5,6 +5,27 @@ import { colors } from "../../core";
 const { darkBlue, skyBlue } = colors;
 
 export const MissionMapContainer = styled.div`
+  .city-arrow-icon-container {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    z-index: 1000;
+    top: 120px;
+    left: 100px;
+
+    &::after {
+      content: "Iniciamos aqui";
+      font-size: 1.5rem;
+    }
+
+    .city-arrow-icon {
+      height: 100%;
+      width: 100%;
+      z-index: 1000;
+      fill: ${skyBlue};
+    }
+  }
+
   ${({ css }) => css}
 `;
 

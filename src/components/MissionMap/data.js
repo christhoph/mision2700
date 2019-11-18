@@ -55,20 +55,20 @@ export const disVisual = {
       cities: [
         {
           id: "c-05",
-          name: "Pedernales",
-          women: 16,
-          men: 26,
-          beneficiaries: 7,
-          coords: { latitude: 0.068226, longitude: -80.044485 },
-          position: 3
-        },
-        {
-          id: "c-06",
           name: "Portoviejo",
           women: 94,
           men: 119,
           beneficiaries: 7,
           coords: { latitude: -1.055685, longitude: -80.451366 },
+          position: 3
+        },
+        {
+          id: "c-06",
+          name: "Pedernales",
+          women: 16,
+          men: 26,
+          beneficiaries: 7,
+          coords: { latitude: 0.068226, longitude: -80.044485 },
           position: 4
         }
       ]
