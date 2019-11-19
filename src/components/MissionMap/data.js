@@ -377,28 +377,28 @@ export const disVisual = {
             {
               id: "img-31",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+TULC%C3%81N/TULC%C3%81N+MISI%C3%93N+2700_28.jpg",
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+TULC%C3%81N/optimizadas/TULC%C3%81N-MISI%C3%93N-2700_28.png",
               height: 3456,
               width: 5184
             },
             {
               id: "img-32",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+TULC%C3%81N/TULC%C3%81N+MISI%C3%93N+2700_44.jpg",
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+TULC%C3%81N/optimizadas/TULC%C3%81N-MISI%C3%93N-2700_44.png",
               height: 3456,
               width: 5184
             },
             {
               id: "img-33",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+TULC%C3%81N/TULC%C3%81N+MISI%C3%93N+2700_34.jpg",
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+TULC%C3%81N/optimizadas/TULC%C3%81N-MISI%C3%93N-2700_34.png",
               height: 3456,
               width: 5184
             },
             {
               id: "img-34",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+TULC%C3%81N/TULC%C3%81N+MISI%C3%93N+2700_52.jpg",
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+TULC%C3%81N/optimizadas/TULC%C3%81N-MISI%C3%93N-2700_52.png",
               height: 3456,
               width: 5184
             }

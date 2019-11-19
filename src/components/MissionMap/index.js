@@ -21,50 +21,33 @@ import { disVisual } from "./data";
 
 const { skyBlue } = colors;
 
-const initialState = {
-  id: "",
-  name: ""
-};
-
-const modalSlider = [
-  {
-    id: "ms-01",
-    src:
-      "https://storage.googleapis.com/flexbox-180917.appspot.com/mision2700/handeyesvideo.png"
-  },
-  {
-    id: "ms-02",
-    src:
-      "https://storage.googleapis.com/flexbox-180917.appspot.com/mision2700/handeyes_help.jpg"
-  },
-  {
-    id: "ms-03",
-    src:
-      "https://storage.googleapis.com/flexbox-180917.appspot.com/mision2700/handeyesvideo.png"
-  },
-  {
-    id: "ms-04",
-    src:
-      "https://storage.googleapis.com/flexbox-180917.appspot.com/mision2700/handeyes_help.jpg"
-  },
-  {
-    id: "ms-05",
-    src:
-      "https://storage.googleapis.com/flexbox-180917.appspot.com/mision2700/handeyesvideo.png"
-  }
-];
-
 const MissionMap = ({ containerCss, allStates, states }) => {
   const [openModal, setOpenModal] = useState(false);
-  const [citySelected, setCitySelected] = useState(initialState);
-  const [showSlide, setShowSlide] = useState(modalSlider[0]);
+  const [stateSelected, setStateSelected] = useState(null);
+  const [showSlide, setShowSlide] = useState("");
+
+  const findImages =
+    stateSelected && stateSelected.cities && stateSelected.cities[0].images;
 
   const toggleOpenModal = useCallback(() => setOpenModal(val => !val), []);
-  const handleSetCitySelected = useCallback(city => setCitySelected(city), []);
-  const handleSetShowSlide = useCallback(
-    imageId => () => setShowSlide(modalSlider.find(({ id }) => id === imageId)),
+  const handleSetStateSelected = useCallback(
+    state => setStateSelected(state),
     []
   );
+  const handleSetShowSlide = useCallback(
+    imageId => () =>
+      setShowSlide(findImages.find(({ id }) => id === imageId).url),
+    [findImages]
+  );
+
+  useEffect(() => {
+    if (findImages && findImages.length && !showSlide)
+      setShowSlide(findImages[0].url);
+    if (showSlide && !openModal) {
+      setStateSelected(null);
+      setShowSlide("");
+    }
+  }, [findImages, showSlide, openModal]);
 
   const setAllStates =
     allStates && allStates.map(({ map_id, value }) => ({ id: map_id, value }));
@@ -79,24 +62,17 @@ const MissionMap = ({ containerCss, allStates, states }) => {
     )
     .sort((a, b) => (a.position > b.position ? 1 : -1));
 
-  const getCity = disVisual.states
-    .filter(({ cities }) => cities && cities.length)
-    .map(({ cities }) =>
-      cities.reduce((prev, curr) => ({ ...prev, ...curr }), null)
-    )
-    .find(({ name }) => name === citySelected.name);
-
   useEffect(() => {
     const chart = setChart(
       setAllStates,
       toggleOpenModal,
-      handleSetCitySelected,
+      handleSetStateSelected,
       getCities,
       disVisual.states
     );
 
     return () => chart.dispose();
-  }, [setAllStates, toggleOpenModal, handleSetCitySelected, getCities]);
+  }, [setAllStates, toggleOpenModal, handleSetStateSelected, getCities]);
 
   return (
     <MissionMapContainer css={containerCss}>
@@ -114,11 +90,15 @@ const MissionMap = ({ containerCss, allStates, states }) => {
         `}
       >
         <ModalContentUp>
-          <ModalView>
-            <ModalViewImage src={showSlide.src} alt="modal_view" />
-          </ModalView>
+          {showSlide && (
+            <ModalView>
+              <ModalViewImage src={showSlide} alt="modal_view" />
+            </ModalView>
+          )}
           <ModalInfo>
-            <ModalInfoTitle>{citySelected.name}</ModalInfoTitle>
+            <ModalInfoTitle>
+              {stateSelected && stateSelected.name}
+            </ModalInfoTitle>
             <ModalInfoContent>
               <ModalInfoContentItem>
                 <SVGIcons
@@ -126,7 +106,9 @@ const MissionMap = ({ containerCss, allStates, states }) => {
                   iconClass="modal-info-icon"
                   iconName="blind_person_icon"
                 />
-                <span>{getCity && getCity.men + getCity.women} </span>
+                <span>
+                  {stateSelected && stateSelected.men + stateSelected.women}{" "}
+                </span>
                 <p>Personas con Discapacidad Visual</p>
               </ModalInfoContentItem>
               <ModalInfoContentItem>
@@ -137,18 +119,19 @@ const MissionMap = ({ containerCss, allStates, states }) => {
                   iconSize={28}
                   iconColor={skyBlue}
                 />
-                <span>{getCity && getCity.beneficiaries}</span>
+                <span>{stateSelected && stateSelected.beneficiaries}</span>
                 <p>Personas Beneficiadas</p>
               </ModalInfoContentItem>
             </ModalInfoContent>
           </ModalInfo>
         </ModalContentUp>
         <ModalContentDown>
-          {modalSlider.map(({ id, src }) => (
-            <ModalSlide key={id} onClick={handleSetShowSlide(id)}>
-              <ModalSlideImage src={src} alt="modal_slide" />
-            </ModalSlide>
-          ))}
+          {findImages &&
+            findImages.map(({ id, url }) => (
+              <ModalSlide key={id} onClick={handleSetShowSlide(id)}>
+                <ModalSlideImage src={url} alt="modal_slide" />
+              </ModalSlide>
+            ))}
         </ModalContentDown>
       </Modal>
     </MissionMapContainer>

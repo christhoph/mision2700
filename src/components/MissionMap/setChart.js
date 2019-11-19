@@ -7,7 +7,7 @@ import { SVGS } from "../../core";
 export const setChart = (
   provinces,
   toggleOpenModal,
-  handleSetCitySelected,
+  handleSetStateSelected,
   citiesData,
   states
 ) => {
@@ -45,17 +45,17 @@ export const setChart = (
   `;
   polygonTemplate.nonScalingStroke = true;
   polygonTemplate.strokeWidth = 0.5;
-  var hs = polygonTemplate.states.create("hover");
-  hs.properties.fill = am4core.color("#3c5bdc");
+  polygonTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer;
   polygonTemplate.events.on("hit", e => {
     const selectName = e.target.dataItem.dataContext.name;
-    console.log("selectName: ", selectName);
-    toggleOpenModal();
-    // handleSetCitySelected({
-    //   id: polygonTemplate.name,
-    //   name: polygonTemplate.name
-    // });
+    const findState = states.find(({ name }) => name === selectName);
+    if (findState && findState.cities) {
+      toggleOpenModal();
+      handleSetStateSelected(findState);
+    }
   });
+  var hs = polygonTemplate.states.create("hover");
+  hs.properties.fill = am4core.color("#3c5bdc");
 
   let cities = chart.series.push(new am4maps.MapImageSeries());
   cities.mapImages.template.nonScaling = true;
@@ -71,18 +71,10 @@ export const setChart = (
 
   const addCity = (coords, title) => {
     let city = cities.mapImages.create();
-    city.events.on("hit", () => {
-      toggleOpenModal();
-      handleSetCitySelected({
-        id: title,
-        name: title
-      });
-    });
     city.latitude = coords.latitude;
     city.longitude = coords.longitude;
     city.tooltip.dy = -30;
     city.tooltipText = title;
-    city.cursorOverStyle = am4core.MouseCursorStyle.pointer;
     return city;
   };
 
