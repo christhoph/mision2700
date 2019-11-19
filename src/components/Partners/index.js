@@ -10,7 +10,7 @@ import { ContentSize } from "../../core";
 
 const Partners = () => (
   <PartnersContainer>
-    <PartnersHashtag>#YAMESUMÉ</PartnersHashtag>
+    <PartnersHashtag>#YaMeSumé</PartnersHashtag>
     <ContentSize
       css={`
         justify-content: space-evenly;

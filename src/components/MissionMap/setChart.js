@@ -21,9 +21,12 @@ export const setChart = (
     latitude: -1.738111,
     longitude: -78.323052
   };
+  // disabled map user interaction
+  chart.seriesContainer.resizable = false;
+  chart.seriesContainer.draggable = false;
   chart.seriesContainer.resizable = false;
   chart.minZoomLevel = 2.5;
-  chart.maxZoomLevel = 3;
+  chart.maxZoomLevel = 2.5;
 
   let polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
   polygonSeries.useGeodata = true;

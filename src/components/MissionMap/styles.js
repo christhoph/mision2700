@@ -5,13 +5,15 @@ import { colors } from "../../core";
 const { darkBlue, skyBlue } = colors;
 
 export const MissionMapContainer = styled.div`
+  position: relative;
+
   .city-arrow-icon-container {
     height: 200px;
     width: 200px;
     position: absolute;
     z-index: 1000;
-    top: 120px;
-    left: 100px;
+    top: 5px;
+    left: -90px;
 
     &::after {
       content: "Iniciamos aqui";

@@ -15,8 +15,7 @@ import AboutMission from "../../components/AboutMission";
 import Partners from "../../components/Partners";
 import ModalMission from "../../components/ModalMission";
 
-const URL_API =
-  "http://ec2-3-19-209-147.us-east-2.compute.amazonaws.com:8080/missions/";
+const URL_API = process.env.REACT_APP_MISSIONS_API;
 
 const Home = () => {
   const [mission, setMission] = useState({});
@@ -31,7 +30,7 @@ const Home = () => {
   );
 
   useEffect(() => {
-    axios(`${URL_API}`).then(res => {
+    axios(`${URL_API}/missions/`).then(res => {
       const { data } = res;
       const { countries } = data[0];
       const findCountry = countries.find(({ name }) => name === "Ecuador");
