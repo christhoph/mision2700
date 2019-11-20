@@ -34,6 +34,8 @@ export const ModalContent = styled.div`
     right: 0.5rem;
     cursor: pointer;
 
+    ${({ closeIconCss }) => closeIconCss}
+
     .close-icon {
       height: 30px;
       width: 30px;

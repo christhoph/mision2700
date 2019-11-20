@@ -29,37 +29,37 @@ export const disVisual = {
             {
               id: "img-01",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+ESMERALDAS/MISI%C3%93N+2700+ESMERALDAS_10.jpg",
-              height: 3362,
-              width: 4880
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+ESMERALDAS/optimizadas/esmeraldas1.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-02",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+ESMERALDAS/MISI%C3%93N+2700+ESMERALDAS_24.jpg",
-              height: 4815,
-              width: 3430
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+ESMERALDAS/optimizadas/esmeraldas2.png",
+              height: 773,
+              width: 1122
             },
             {
               id: "img-03",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+ESMERALDAS/MISI%C3%93N+2700+ESMERALDAS_21.jpg",
-              height: 3960,
-              width: 2399
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+ESMERALDAS/optimizadas/esmeraldas3.png",
+              height: 1149,
+              width: 649
             },
             {
               id: "img-04",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+ESMERALDAS/MISI%C3%93N+2700+ESMERALDAS_16.jpg",
-              height: 4787,
-              width: 2705
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+ESMERALDAS/optimizadas/esmeraldas4.png",
+              height: 1108,
+              width: 789
             },
             {
               id: "img-05",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+ESMERALDAS/MISI%C3%93N+2700+ESMERALDAS_2.jpg",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+ESMERALDAS/optimizadas/esmeraldas5.png",
+              height: 1148,
+              width: 775
             }
           ]
         }
@@ -86,37 +86,37 @@ export const disVisual = {
             {
               id: "img-06",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+SANTO+DOMINGO+/_MG_9787.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+SANTO+DOMINGO+/optimizadas/sto-domingo1.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-07",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+SANTO+DOMINGO+/_MG_9810.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+SANTO+DOMINGO+/optimizadas/sto-domingo2.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-08",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+SANTO+DOMINGO+/_MG_9844.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+SANTO+DOMINGO+/optimizadas/sto-domingo3.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-09",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+SANTO+DOMINGO+/_MG_9870.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+SANTO+DOMINGO+/optimizadas/sto-domingo4.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-10",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+SANTO+DOMINGO+/_MG_9948.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+SANTO+DOMINGO+/optimizadas/sto-domingo5.png",
+              height: 1193,
+              width: 795
             }
           ]
         }
@@ -143,37 +143,37 @@ export const disVisual = {
             {
               id: "img-11",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PORTOVIEJO/_MG_5680.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PORTOVIEJO/optimizadas/portoviejo1.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-12",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PORTOVIEJO/_MG_5754.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PORTOVIEJO/optimizadas/portoviejo2.png",
+              height: 795,
+              width: 1192
             },
             {
               id: "img-13",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PORTOVIEJO/_MG_5796.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PORTOVIEJO/optimizadas/portoviejo3.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-14",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PORTOVIEJO/_MG_5860.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PORTOVIEJO/optimizadas/portoviejo4.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-15",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PORTOVIEJO/_MG_5939.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PORTOVIEJO/optimizadas/portoviejo5.png",
+              height: 795,
+              width: 1192
             }
           ]
         },
@@ -189,37 +189,37 @@ export const disVisual = {
             {
               id: "img-16",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PEDERNALES/_MG_5096.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PEDERNALES/optimizadas/pedernales1.png",
+              height: 1053,
+              width: 696
             },
             {
               id: "img-17",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PEDERNALES/_MG_4996.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PEDERNALES/optimizadas/pedernales2.png",
+              height: 795,
+              width: 1192
             },
             {
               id: "img-18",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PEDERNALES/_MG_4901.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PEDERNALES/optimizadas/pedernales3.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-19",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PEDERNALES/_MG_4871.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PEDERNALES/optimizadas/pedernales4.png",
+              height: 795,
+              width: 1192
             },
             {
               id: "img-20",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PEDERNALES/_MG_5455.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PEDERNALES/optimizadas/pedernales5.png",
+              height: 795,
+              width: 1192
             }
           ]
         }
@@ -255,37 +255,37 @@ export const disVisual = {
             {
               id: "img-21",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+GUAYAQUIL/_MG_6384.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+GUAYAQUIL/optimizadas/guayaquil2.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-22",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+GUAYAQUIL/_MG_6391.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+GUAYAQUIL/optimizadas/guayaquil3.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-23",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+GUAYAQUIL/_MG_6430.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+GUAYAQUIL/optimizadas/guayaquil4.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-24",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+GUAYAQUIL/_MG_6442.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+GUAYAQUIL/optimizadas/guayaquil5.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-25",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+GUAYAQUIL/_MG_6550.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+GUAYAQUIL/optimizadas/guayaquil1.png",
+              height: 795,
+              width: 1192
             }
           ]
         }
@@ -320,37 +320,37 @@ export const disVisual = {
             {
               id: "img-26",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+MACHALA/_MG_6805.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+MACHALA/optimizado/machala2.png",
+              height: 1037,
+              width: 1144
             },
             {
               id: "img-27",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+MACHALA/_MG_6830.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+MACHALA/optimizado/machala3.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-28",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+MACHALA/_MG_6856.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+MACHALA/optimizado/machala4.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-29",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+MACHALA/_MG_6991.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+MACHALA/optimizado/machala5.png",
+              height: 795,
+              width: 1192
             },
             {
               id: "img-30",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+MACHALA/_MG_7049.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+MACHALA/optimizado/machala1.png",
+              height: 795,
+              width: 1192
             }
           ]
         }
@@ -378,29 +378,29 @@ export const disVisual = {
               id: "img-31",
               url:
                 "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+TULC%C3%81N/optimizadas/TULC%C3%81N-MISI%C3%93N-2700_28.png",
-              height: 3456,
-              width: 5184
+              height: 795,
+              width: 1192
             },
             {
               id: "img-32",
               url:
                 "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+TULC%C3%81N/optimizadas/TULC%C3%81N-MISI%C3%93N-2700_44.png",
-              height: 3456,
-              width: 5184
+              height: 795,
+              width: 1192
             },
             {
               id: "img-33",
               url:
                 "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+TULC%C3%81N/optimizadas/TULC%C3%81N-MISI%C3%93N-2700_34.png",
-              height: 3456,
-              width: 5184
+              height: 795,
+              width: 1192
             },
             {
               id: "img-34",
               url:
                 "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+TULC%C3%81N/optimizadas/TULC%C3%81N-MISI%C3%93N-2700_52.png",
-              height: 3456,
-              width: 5184
+              height: 795,
+              width: 1192
             }
           ]
         }
@@ -427,37 +427,37 @@ export const disVisual = {
             {
               id: "img-35",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+IBARRA/IBARRA+MISI%C3%93N+2700_18.jpg",
-              height: 3456,
-              width: 3963
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+IBARRA/optimizadas/ibarra2.png",
+              height: 774,
+              width: 1177
             },
             {
               id: "img-36",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+IBARRA/IBARRA+MISI%C3%93N+2700_19.jpg",
-              height: 3456,
-              width: 3552
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+IBARRA/optimizadas/ibarra3.png",
+              height: 1037,
+              width: 1066
             },
             {
               id: "img-37",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+IBARRA/IBARRA+MISI%C3%93N+2700_26.jpg",
-              height: 3363,
-              width: 5116
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+IBARRA/optimizadas/ibarra4.png",
+              height: 1037,
+              width: 1189
             },
             {
               id: "img-38",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+IBARRA/IBARRA+MISI%C3%93N+2700_7.jpg",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+IBARRA/optimizadas/ibarra5.png",
+              height: 795,
+              width: 1192
             },
             {
               id: "img-39",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+IBARRA/IBARRA+MISI%C3%93N+2700_29.jpg",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+IBARRA/optimizadas/ibarra1.png",
+              height: 795,
+              width: 1192
             }
           ]
         }
@@ -505,37 +505,37 @@ export const disVisual = {
             {
               id: "img-40",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LATACUNGA/_MG_9412.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LATACUNGA/optimizadas/latacunga2.png",
+              height: 795,
+              width: 1192
             },
             {
               id: "img-41",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LATACUNGA/_MG_9414.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LATACUNGA/optimizadas/latacunga3.png",
+              height: 795,
+              width: 1192
             },
             {
               id: "img-42",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LATACUNGA/_MG_9497.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LATACUNGA/optimizadas/latacunga4.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-43",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LATACUNGA/_MG_9553.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LATACUNGA/optimizadas/latacunga5.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-44",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LATACUNGA/_MG_9605.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LATACUNGA/optimizadas/latacunga1.png",
+              height: 795,
+              width: 1192
             }
           ]
         }
@@ -562,37 +562,37 @@ export const disVisual = {
             {
               id: "img-45",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+AMBATO/_MG_8981.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+AMBATO/optimizadas/ambato5.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-46",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+AMBATO/_MG_9023.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+AMBATO/optimizadas/ambato3.png",
+              height: 795,
+              width: 1192
             },
             {
               id: "img-47",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+AMBATO/_MG_9060.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+AMBATO/optimizadas/ambato.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-48",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+AMBATO/_MG_9075.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+AMBATO/optimizadas/ambato4.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-49",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+AMBATO/_MG_9205.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+AMBATO/optimizadas/ambato2.png",
+              height: 795,
+              width: 1192
             }
           ]
         }
@@ -627,37 +627,37 @@ export const disVisual = {
             {
               id: "img-50",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+RIOBAMBA/_MG_8595.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+RIOBAMBA/optimizadas/riobamba.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-51",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+RIOBAMBA/_MG_8526.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+RIOBAMBA/optimizadas/riobamba1.png",
+              height: 795,
+              width: 1192
             },
             {
               id: "img-52",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+RIOBAMBA/_MG_8675.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+RIOBAMBA/optimizadas/riobamba2.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-53",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+RIOBAMBA/_MG_8484.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+RIOBAMBA/optimizadas/riobamba3.png",
+              height: 795,
+              width: 1192
             },
             {
               id: "img-54",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+RIOBAMBA/_MG_8785.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+RIOBAMBA/optimizadas/riobamba4.png",
+              height: 795,
+              width: 1192
             }
           ]
         }
@@ -692,37 +692,37 @@ export const disVisual = {
             {
               id: "img-55",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+CUENCA/_MG_7840.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+CUENCA/optimizadas/cuenca1.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-56",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+CUENCA/_MG_7955.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+CUENCA/optimizadas/cuenca2.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-57",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+CUENCA/_MG_7741.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+CUENCA/optimizadas/cuenca3.png",
+              height: 864,
+              width: 1296
             },
             {
               id: "img-58",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+CUENCA/_MG_7786.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+CUENCA/optimizadas/cuenca4.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-59",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+CUENCA/_MG_7876.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+CUENCA/optimizadas/cuenca5.png",
+              height: 1193,
+              width: 795
             }
           ]
         }
@@ -749,37 +749,37 @@ export const disVisual = {
             {
               id: "img-60",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LOJA/_MG_7350.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LOJA/optimizadas/loja2.png",
+              height: 795,
+              width: 1192
             },
             {
               id: "img-61",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LOJA/_MG_7467.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LOJA/optimizadas/loja3.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-62",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LOJA/_MG_7482.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LOJA/optimizadas/loja4.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-63",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LOJA/_MG_7540.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LOJA/optimizadas/loja5.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-64",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LOJA/_MG_7573.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LOJA/optimizadas/loja1.png",
+              height: 795,
+              width: 1192
             }
           ]
         }
@@ -831,37 +831,37 @@ export const disVisual = {
             {
               id: "img-65",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PUYO/_MG_8159.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PUYO/optimizadas/puyo1.png",
+              height: 795,
+              width: 1192
             },
             {
               id: "img-66",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PUYO/_MG_8202.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PUYO/optimizadas/puyo2.png",
+              height: 795,
+              width: 1192
             },
             {
               id: "img-67",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PUYO/_MG_8211.JPG",
-              height: 5184,
-              width: 3456
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PUYO/optimizadas/puyo3.png",
+              height: 1193,
+              width: 795
             },
             {
               id: "img-68",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PUYO/_MG_8259.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PUYO/optimizadas/puyo4.png",
+              height: 795,
+              width: 1192
             },
             {
               id: "img-69",
               url:
-                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PUYO/_MG_8314.JPG",
-              height: 3456,
-              width: 5184
+                "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PUYO/optimizadas/puyo5.png",
+              height: 795,
+              width: 1192
             }
           ]
         }

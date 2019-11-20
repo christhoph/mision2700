@@ -20,7 +20,7 @@ const URL_API = process.env.REACT_APP_MISSIONS_API;
 const Home = () => {
   const [mission, setMission] = useState({});
   const [openModal, setOpenModal] = useState(false);
-  const [openPopupModal, setOpenPopupModal] = useState(false);
+  const [openPopupModal, setOpenPopupModal] = useState(true);
 
   const toggleOpenModal = useCallback(() => setOpenModal(val => !val), []);
 

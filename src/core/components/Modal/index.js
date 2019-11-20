@@ -4,7 +4,7 @@ import { ModalContainer, ModalContent } from "./styles";
 import ContentSize from "../ContentSize";
 import SVGIcons from "../SVGIcons";
 
-const Modal = ({ open, onClose, css, children }) => (
+const Modal = ({ open, onClose, css, closeIconCss, children }) => (
   <ModalContainer open={open} onClose={onClose}>
     <ContentSize
       css={`
@@ -12,7 +12,7 @@ const Modal = ({ open, onClose, css, children }) => (
         align-items: center;
       `}
     >
-      <ModalContent css={css}>
+      <ModalContent css={css} closeIconCss={closeIconCss}>
         <SVGIcons
           wrapperClass="close-icon-container"
           iconClass="close-icon"

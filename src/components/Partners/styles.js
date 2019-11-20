@@ -14,11 +14,8 @@ export const PartnersContainer = styled.div`
 `;
 
 export const PartnersHashtag = styled.h2`
-  @import url("https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap");
-
   margin-bottom: 3rem;
 
-  font-family: "Nothing You Could Do", cursive;
   font-size: 3rem;
   font-style: italic;
   font-weigt: bolder;

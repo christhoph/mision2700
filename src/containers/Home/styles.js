@@ -44,9 +44,9 @@ export const DonateButton = styled.button`
   background: ${donateGreen};
   border: 2px solid ${donateGreen};
   border-radius: 5px;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 5rem;
   margin: 1rem 0;
   color: ${white};
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   letter-spacing: 0.05rem;
 `;

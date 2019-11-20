@@ -13,7 +13,7 @@ const AboutMission = () => (
   <AboutMissionContainer>
     <ContentSize>
       <AboutMissionInfo>
-        <AboutMissionInfoTitle>Que es la Mision 2700?</AboutMissionInfoTitle>
+        <AboutMissionInfoTitle>¿Que es la Misión 2700?</AboutMissionInfoTitle>
         <AboutMissionInfoText>
           Es una iniciativa de HandEyes para la Navidad, recorremos 2700
           kilómetros (Costa, Sierra y Oriente) entregando de manera gratuita más

@@ -1,13 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import {
-  NavbarContainer,
-  LogoContainer,
-  LogoImage,
-  MenuContainer,
-  MenuItem
-} from "./styles";
+import { NavbarContainer, LogoContainer, LogoImage } from "./styles";
 
 const Navbar = () => (
   <NavbarContainer>
@@ -26,17 +20,6 @@ const Navbar = () => (
         />
       </a>
     </LogoContainer>
-    <MenuContainer>
-      <MenuItem>
-        <Link to="/">Inicio</Link>
-      </MenuItem>
-      <MenuItem>
-        <Link to="/about-us">Quienes Somos</Link>
-      </MenuItem>
-      <MenuItem>
-        <Link to="/histories">Historias</Link>
-      </MenuItem>
-    </MenuContainer>
   </NavbarContainer>
 );
 

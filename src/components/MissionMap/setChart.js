@@ -65,9 +65,7 @@ export const setChart = (
   city.scale = 0.065;
   city.horizontalCenter = "middle";
   city.verticalCenter = "bottom";
-  city.fill = chart.colors.getIndex(7);
-  var cityHs = city.states.create("hover");
-  cityHs.properties.fill = chart.colors.getIndex(10);
+  city.fill = am4core.color("#1e75b8");
 
   const addCity = (coords, title) => {
     let city = cities.mapImages.create();

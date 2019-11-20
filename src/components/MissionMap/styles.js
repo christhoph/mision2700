@@ -16,7 +16,7 @@ export const MissionMapContainer = styled.div`
     left: -90px;
 
     &::after {
-      content: "Iniciamos aqui";
+      content: "Iniciamos aquí";
       font-size: 1.5rem;
     }
 

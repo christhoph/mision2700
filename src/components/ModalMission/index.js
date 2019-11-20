@@ -19,6 +19,10 @@ const ModalMission = ({ open, onClose }) => (
         }
       }
     `}
+    closeIconCss={`
+      top: 30px;
+      right: -20px;
+      `}
   >
     <VideoVimeo className="mission-video" video={373764053} />
   </Modal>
