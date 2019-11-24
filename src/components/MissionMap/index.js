@@ -24,7 +24,7 @@ const { skyBlue } = colors;
 const MissionMap = ({ containerCss, allStates, states }) => {
   const [openModal, setOpenModal] = useState(false);
   const [stateSelected, setStateSelected] = useState(null);
-  const [showSlide, setShowSlide] = useState("");
+  const [showSlide, setShowSlide] = useState(null);
 
   const findImages =
     stateSelected && stateSelected.cities && stateSelected.cities[0].images;
@@ -35,17 +35,16 @@ const MissionMap = ({ containerCss, allStates, states }) => {
     []
   );
   const handleSetShowSlide = useCallback(
-    imageId => () =>
-      setShowSlide(findImages.find(({ id }) => id === imageId).url),
+    imageId => () => setShowSlide(findImages.find(({ id }) => id === imageId)),
     [findImages]
   );
 
   useEffect(() => {
     if (findImages && findImages.length && !showSlide)
-      setShowSlide(findImages[0].url);
+      setShowSlide(findImages[0]);
     if (showSlide && !openModal) {
       setStateSelected(null);
-      setShowSlide("");
+      setShowSlide(null);
     }
   }, [findImages, showSlide, openModal]);
 
@@ -87,12 +86,17 @@ const MissionMap = ({ containerCss, allStates, states }) => {
         onClose={toggleOpenModal}
         css={`
           flex-direction: column;
+          padding-bottom: 0;
         `}
       >
         <ModalContentUp>
           {showSlide && (
             <ModalView>
-              <ModalViewImage src={showSlide} alt="modal_view" />
+              <ModalViewImage
+                isVertical={showSlide.height > showSlide.width}
+                src={showSlide.url}
+                alt="modal_view"
+              />
             </ModalView>
           )}
           <ModalInfo>
@@ -127,9 +131,13 @@ const MissionMap = ({ containerCss, allStates, states }) => {
         </ModalContentUp>
         <ModalContentDown>
           {findImages &&
-            findImages.map(({ id, url }) => (
+            findImages.map(({ id, url, height, width }) => (
               <ModalSlide key={id} onClick={handleSetShowSlide(id)}>
-                <ModalSlideImage src={url} alt="modal_slide" />
+                <ModalSlideImage
+                  isVertical={height > width}
+                  src={url}
+                  alt="modal_slide"
+                />
               </ModalSlide>
             ))}
         </ModalContentDown>

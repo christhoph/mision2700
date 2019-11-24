@@ -68,7 +68,7 @@ export const disVisual = {
     {
       id: "02",
       map_id: "EC-SD",
-      name: "Santo Domingo de los Tsachilas",
+      name: "Santo Domingo de los Tsáchilas",
       value: 251,
       women: 110,
       men: 141,

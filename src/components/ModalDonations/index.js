@@ -1,97 +1,70 @@
-import React, { useState, useCallback } from "react";
+import React from "react";
 
 import {
-  DonationCard,
-  DonationCardTitle,
-  DonationCardPrice,
-  DonationButton,
-  DonationCounter,
-  DonationCounterButton,
-  DonationInputWrapper,
-  DonationInput
+  ModalDonationsContainer,
+  ModalDonationsImage,
+  ModalDonationsContent,
+  ModalDonationsTitle,
+  ModalDonationsText,
+  ModalDonationsTextEmphasis
 } from "./styles";
 import { Modal } from "../../core";
 
-const paypal = "https://www.paypal.me/HANDEYES/";
+/**
+  BANCO PICHINCHA CORRIENTE
+  2100194583
+  FABCAD SA
+  RUC 1792742986001
+  CEL: 098 444 9647
+  TEL: 022554162
+  DIR: TOLEDO N23 158 Y MADRID ESQUINA
+  MAIL contabilidad@sais3d.com
+ */
 
-const ModalDonations = ({ open, onClose }) => {
-  const [count, setCount] = useState(1);
-  const [price, setPrice] = useState(0);
-
-  const handleSetCount = useCallback(
-    val => () => setCount(val < 1 ? 1 : val),
-    []
-  );
-
-  const handleOnChangeCount = useCallback(
-    ({ target: { value } }) => setCount(value < 1 ? 1 : parseInt(value, 10)),
-    []
-  );
-
-  const handleOnChangePrice = useCallback(
-    ({ target: { value } }) =>
-      setPrice(
-        Number.isInteger(parseInt(value, 10)) ? parseInt(value, 10) : price
-      ),
-    [price]
-  );
-
-  return (
-    <Modal
-      open={open}
-      onClose={onClose}
-      css={`
-        height: max-content;
-        width: max-content;
-      `}
-    >
-      <DonationCard>
-        <DonationCardTitle>Dispositivo EyeClip</DonationCardTitle>
-        <DonationCardPrice>{`$${200 * count}`}</DonationCardPrice>
-        <DonationCounter>
-          <DonationCounterButton onClick={handleSetCount(count - 1)}>
-            -
-          </DonationCounterButton>
-          <DonationInputWrapper>
-            <DonationInput
-              type="text"
-              maxlength="2"
-              value={count}
-              onChange={handleOnChangeCount}
-            />
-          </DonationInputWrapper>
-          <DonationCounterButton onClick={handleSetCount(count + 1)}>
-            +
-          </DonationCounterButton>
-        </DonationCounter>
-        <DonationButton
-          href={`${paypal}${200 * count}`}
-          target="_blank"
-          rel="noopener noreferrer"
+const ModalDonations = ({ open, onClose }) => (
+  <Modal
+    open={open}
+    onClose={onClose}
+    css={`
+      height: max-content;
+      width: max-content;
+      padding: 0;
+    `}
+  >
+    <ModalDonationsContainer>
+      <ModalDonationsImage
+        src="https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+ESMERALDAS/optimizadas/esmeraldas1.png"
+        alt=""
+      />
+      <ModalDonationsContent>
+        <ModalDonationsTitle>Ayúdalos con tu donación</ModalDonationsTitle>
+        <ModalDonationsTextEmphasis
+          css={`
+            margin: 0.75rem 0;
+          `}
         >
-          Donar
-        </DonationButton>
-      </DonationCard>
-      <DonationCard>
-        <DonationCardTitle>Cantidad Deseada</DonationCardTitle>
-        <DonationCardPrice>{`$${price}`}</DonationCardPrice>
-        <DonationInputWrapper className="change-price">
-          <DonationInput
-            type="text"
-            value={price}
-            onChange={handleOnChangePrice}
-          />
-        </DonationInputWrapper>
-        <DonationButton
-          href={`${paypal}${price}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Donar
-        </DonationButton>
-      </DonationCard>
-    </Modal>
-  );
-};
+          Banco Pichincha - Cuenta Corriente
+        </ModalDonationsTextEmphasis>
+        <ModalDonationsInfo title="Cuenta" text="2100194583" />
+        <ModalDonationsInfo title="Nombre" text="FABCAD SA" />
+        <ModalDonationsInfo title="RUC" text="1792742986001" />
+        <ModalDonationsInfo title="Celular" text="0984449647" />
+        <ModalDonationsInfo title="Teléfono" text="022554162" />
+        <ModalDonationsInfo
+          title="Dirección"
+          text="Toledo N23-158 y Madrid esquina"
+        />
+        <ModalDonationsInfo title="E-mail" text="contabilidad@sais3d.com" />
+      </ModalDonationsContent>
+    </ModalDonationsContainer>
+  </Modal>
+);
+
+const ModalDonationsInfo = ({ title, text }) => (
+  <ModalDonationsText>
+    <ModalDonationsTextEmphasis>{title}: </ModalDonationsTextEmphasis>
+    {text}
+  </ModalDonationsText>
+);
 
 export default ModalDonations;

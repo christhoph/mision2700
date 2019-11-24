@@ -11,7 +11,6 @@ export const MissionMapContainer = styled.div`
     height: 200px;
     width: 200px;
     position: absolute;
-    z-index: 1000;
     top: 5px;
     left: -90px;
 
@@ -50,8 +49,14 @@ export const ModalView = styled.div`
 `;
 
 export const ModalViewImage = styled.img`
-  height: inherit;
-  width: 100%;
+  ${({ isVertical }) =>
+    isVertical
+      ? `
+        height: 100%;
+      `
+      : `
+        width: 100%;
+      `}
 `;
 
 export const ModalInfo = styled.div`
@@ -113,8 +118,10 @@ export const ModalContentDown = styled.div`
 `;
 
 export const ModalSlide = styled.div`
-  width: 300px;
+  width: max-content;
+  max-width: 180px;
   display: flex;
+  justify-content: center;
   margin: 1.5rem 1rem;
   cursor: pointer;
 
@@ -123,11 +130,17 @@ export const ModalSlide = styled.div`
   }
 
   &:last-child {
-    margin: right: 0;
+    margin-right: 0;
   }
 `;
 
 export const ModalSlideImage = styled.img`
-  height: inherit;
-  width: 100%;
+  ${({ isVertical }) =>
+    isVertical
+      ? `
+        height: 100%;
+      `
+      : `
+        width: 100%;
+      `}
 `;
