@@ -35,6 +35,10 @@ const ModalDonations = ({ open, onClose }) => {
         <ScrollableContainer
           css={`
             flex-direction: row;
+
+            @media (max-width: ${breakpoints.sm}px) {
+              flex-direction: column;
+            }
           `}
         >
           <ModalDonationsImage src={modalImage} alt="hand eyes - mision 2700" />
