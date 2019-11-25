@@ -22,6 +22,7 @@ export const setChart = (
     longitude: -78.323052
   };
   // disabled map user interaction
+  chart.chartContainer.wheelable = false;
   chart.seriesContainer.resizable = false;
   chart.seriesContainer.draggable = false;
   chart.seriesContainer.resizable = false;
@@ -30,15 +31,12 @@ export const setChart = (
 
   let polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
   polygonSeries.useGeodata = true;
-  polygonSeries.mapPolygons.template.fill = chart.colors
-    .getIndex(0)
-    .lighten(0.5);
   polygonSeries.mapPolygons.template.nonScalingStroke = true;
 
   polygonSeries.data = provinces;
 
   var polygonTemplate = polygonSeries.mapPolygons.template;
-  // polygonTemplate.fill = am4core.color("#eee");
+  polygonTemplate.fill = am4core.color("#b3caee");
   polygonTemplate.tooltipText = `{name}\n
     Personas con
     Discapacidad Visual: {value}
@@ -67,18 +65,18 @@ export const setChart = (
   city.verticalCenter = "bottom";
   city.fill = am4core.color("#1e75b8");
 
-  const addCity = (coords, title) => {
+  const addCity = (coords, title, index) => {
     let city = cities.mapImages.create();
     city.latitude = coords.latitude;
     city.longitude = coords.longitude;
     city.tooltip.dy = -30;
-    city.tooltipText = title;
+    city.tooltipText = `${index} - ${title}`;
     return city;
   };
 
-  // Agregamos las ciudades para mostrar el icono marker en el mapa
-  // Pasamos a la funcion addCity() las coordenadas y el nombre de la ciudad
-  const setCities = citiesData.map(({ name, coords }) => addCity(coords, name));
+  const setCities = citiesData.map(({ name, coords }, index) =>
+    addCity(coords, name, index + 1)
+  );
 
   let lineSeries = chart.series.push(new am4maps.MapArcSeries());
   lineSeries.mapLines.template.line.strokeWidth = 2;
@@ -104,8 +102,6 @@ export const setChart = (
     return line;
   };
 
-  // Agregamos las lineas entre los iconos de cada ciudad
-  // Estas lineas sirven para la animacion del icono del auto
   setCities.map(
     (_, i) =>
       i < setCities.length - 1 && addLine(setCities[i], setCities[i + 1])

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { colors } from "../../core";
+import { colors, breakpoints } from "../../core";
 
 const { white } = colors;
 
@@ -15,6 +15,10 @@ export const AboutMissionInfo = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem 2rem;
+
+  @media (max-width: ${breakpoints.sm}px) {
+    width: 100%;
+  }
 `;
 
 export const AboutMissionInfoTitle = styled.h3`
@@ -27,6 +31,8 @@ export const AboutMissionInfoText = styled.p`
   letter-spacing: 0.01rem;
   line-height: 1.5rem;
   text-align: justify;
+
+  ${({ css }) => css}
 `;
 
 export const AboutMissionVideo = styled.div`
@@ -48,6 +54,11 @@ export const AboutMissionVideo = styled.div`
       width: 50px;
       fill: ${white};
     }
+  }
+
+  @media (max-width: ${breakpoints.sm}px) {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 `;
 

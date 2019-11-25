@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { constants } from "../../core";
+import { constants, breakpoints } from "../../core";
 
 const { dotBg } = constants;
 
@@ -11,20 +11,20 @@ export const PartnersContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 3rem;
+
+  @media (max-width: ${breakpoints.sm}px) {
+    padding: 1rem;
+  }
 `;
 
-export const PartnersHashtag = styled.h2`
-  margin-bottom: 3rem;
-
-  font-size: 3rem;
-  font-style: italic;
-  font-weigt: bolder;
-`;
-
-export const PartnerSite = styled.a`
-  padding: 0.5rem;
+export const PartnersHashtag = styled.img`
+  @media (max-width: ${breakpoints.sm}px) {
+    width: 100%;
+  }
 `;
 
 export const PartnerImage = styled.img`
-  margin: 0 1rem;
+  margin: 2rem 1rem;
+
+  ${({ css }) => css}
 `;

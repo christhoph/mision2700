@@ -1,17 +1,23 @@
 import styled from "styled-components";
 
+import { breakpoints } from "../../constants";
+
 export const NavbarContainer = styled.div`
   height: 65px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   padding: 0 2rem;
   box-shadow: 0 2px 2px -2px gray;
   z-index: 10;
+
+  @media (max-width: ${breakpoints.sm}px) {
+    justify-content: center;
+  }
 `;
 
 export const LogoContainer = styled.div`
   height: 100%;
+  padding: 0.5rem 0;
 `;
 
 export const LogoImage = styled.img`

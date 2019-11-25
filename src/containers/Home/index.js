@@ -8,7 +8,7 @@ import {
   DonateButtonContainer,
   DonateButton
 } from "./styles";
-import { ContentSize } from "../../core";
+import { ContentSize, breakpoints } from "../../core";
 import MissionMap from "../../components/MissionMap";
 import Information from "../../components/Information";
 import AboutMission from "../../components/AboutMission";
@@ -52,14 +52,35 @@ const Home = () => {
       <HomeTitleContainer>
         <HomeTitle>Misión 2700</HomeTitle>
       </HomeTitleContainer>
-      <ContentSize>
+      <ContentSize
+        css={`
+          @media (max-width: ${breakpoints.sm}px) {
+            flex-direction: column-reverse;
+            align-items: center;
+          }
+        `}
+      >
         <MissionMap
-          containerCss="width: 60%;"
+          containerCss={`
+            width: 60%;
+
+            @media (max-width: ${breakpoints.sm}px) {
+              height: 400px;
+              width: 100%;
+            }
+          `}
           allStates={mission && mission.states}
           states={filterStates && filterStates}
         />
         <Information
-          containerCss="width: 40%;"
+          containerCss={`
+            width: 40%;
+
+            @media (max-width: ${breakpoints.sm}px) {
+              height: 600px;
+              width: 100%;
+            }
+          `}
           visitCities={filterStates && filterStates.length}
           openModal={openModal}
           toggleOpenModal={toggleOpenModal}

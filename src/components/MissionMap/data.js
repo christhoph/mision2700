@@ -27,6 +27,12 @@ export const disVisual = {
           position: 4,
           images: [
             {
+              id: "vid-01",
+              videoId: "eNqHbEOhfqo",
+              height: 110,
+              width: 155
+            },
+            {
               id: "img-01",
               url:
                 "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+ESMERALDAS/optimizadas/esmeraldas1.png",
@@ -83,6 +89,12 @@ export const disVisual = {
           coords: { latitude: -0.255764, longitude: -79.174124 },
           position: 15,
           images: [
+            {
+              id: "vid-16",
+              videoId: "eNqHbEOhfqo",
+              height: 110,
+              width: 155
+            },
             {
               id: "img-06",
               url:
@@ -141,6 +153,12 @@ export const disVisual = {
           position: 5,
           images: [
             {
+              id: "vid-05",
+              videoId: "eNqHbEOhfqo",
+              height: 110,
+              width: 155
+            },
+            {
               id: "img-11",
               url:
                 "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+PORTOVIEJO/optimizadas/portoviejo1.png",
@@ -186,6 +204,12 @@ export const disVisual = {
           coords: { latitude: 0.068226, longitude: -80.044485 },
           position: 6,
           images: [
+            {
+              id: "vid-06",
+              videoId: "eNqHbEOhfqo",
+              height: 110,
+              width: 155
+            },
             {
               id: "img-16",
               url:
@@ -253,6 +277,12 @@ export const disVisual = {
           position: 7,
           images: [
             {
+              id: "vid-03",
+              videoId: "eNqHbEOhfqo",
+              height: 110,
+              width: 155
+            },
+            {
               id: "img-21",
               url:
                 "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+GUAYAQUIL/optimizadas/guayaquil2.png",
@@ -318,6 +348,12 @@ export const disVisual = {
           position: 8,
           images: [
             {
+              id: "vid-07",
+              videoId: "eNqHbEOhfqo",
+              height: 110,
+              width: 155
+            },
+            {
               id: "img-26",
               url:
                 "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+MACHALA/optimizado/machala2.png",
@@ -375,6 +411,12 @@ export const disVisual = {
           position: 3,
           images: [
             {
+              id: "vid-18",
+              videoId: "eNqHbEOhfqo",
+              height: 110,
+              width: 155
+            },
+            {
               id: "img-31",
               url:
                 "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+TULC%C3%81N/optimizadas/TULC%C3%81N-MISI%C3%93N-2700_28.png",
@@ -424,6 +466,12 @@ export const disVisual = {
           coords: { latitude: 0.346642, longitude: -78.130284 },
           position: 2,
           images: [
+            {
+              id: "vid-04",
+              videoId: "eNqHbEOhfqo",
+              height: 110,
+              width: 155
+            },
             {
               id: "img-35",
               url:
@@ -503,6 +551,12 @@ export const disVisual = {
           position: 14,
           images: [
             {
+              id: "vid-15",
+              videoId: "eNqHbEOhfqo",
+              height: 110,
+              width: 155
+            },
+            {
               id: "img-40",
               url:
                 "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+LATACUNGA/optimizadas/latacunga2.png",
@@ -559,6 +613,12 @@ export const disVisual = {
           coords: { latitude: -1.253755, longitude: -78.619298 },
           position: 13,
           images: [
+            {
+              id: "vid-14",
+              videoId: "eNqHbEOhfqo",
+              height: 110,
+              width: 155
+            },
             {
               id: "img-45",
               url:
@@ -625,6 +685,12 @@ export const disVisual = {
           position: 11,
           images: [
             {
+              id: "vid-10",
+              videoId: "eNqHbEOhfqo",
+              height: 110,
+              width: 155
+            },
+            {
               id: "img-50",
               url:
                 "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+RIOBAMBA/optimizadas/riobamba.png",
@@ -690,6 +756,12 @@ export const disVisual = {
           position: 10,
           images: [
             {
+              id: "vid-02",
+              videoId: "eNqHbEOhfqo",
+              height: 110,
+              width: 155
+            },
+            {
               id: "img-55",
               url:
                 "https://s3.us-east-2.amazonaws.com/mision20700.2018/FOTOS+CUENCA/optimizadas/cuenca1.png",
@@ -746,6 +818,12 @@ export const disVisual = {
           coords: { latitude: -4.008082, longitude: -79.210965 },
           position: 9,
           images: [
+            {
+              id: "vid-11",
+              videoId: "eNqHbEOhfqo",
+              height: 110,
+              width: 155
+            },
             {
               id: "img-60",
               url:
@@ -828,6 +906,12 @@ export const disVisual = {
           coords: { latitude: -1.49319, longitude: -77.999795 },
           position: 12,
           images: [
+            {
+              id: "vid-12",
+              videoId: "eNqHbEOhfqo",
+              height: 110,
+              width: 155
+            },
             {
               id: "img-65",
               url:

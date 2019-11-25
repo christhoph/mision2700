@@ -22,9 +22,11 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow: hidden auto;
   }
 
   ::-webkit-scrollbar {
+    height: 5px;
     width: 5px;
   }
 

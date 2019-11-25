@@ -10,8 +10,13 @@ export const ContentSizeContainer = styled.div`
 
   ${({ css }) => css}
 
-  @media (max-width: ${breakpoints.sm}px) {
+  @media (max-width: ${breakpoints.md}px) {
     min-width: ${contentSizeBreakpoints.sm}px;
+    max-width: ${contentSizeBreakpoints.md}px;
+  }
+
+  @media (max-width: ${breakpoints.sm}px) {
+    min-width: 300px;
     max-width: ${contentSizeBreakpoints.sm}px;
   }
 `;

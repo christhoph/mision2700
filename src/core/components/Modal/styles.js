@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Modal from "@material-ui/core/Modal";
 
 import { colors } from "../../styles";
+import { breakpoints } from "../../constants";
 
 const { white } = colors;
 
@@ -40,5 +41,9 @@ export const ModalContent = styled.div`
       height: 30px;
       width: 30px;
     }
+  }
+
+  @media (max-width: ${breakpoints.sm}px) {
+    height: 100%;
   }
 `;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { colors } from "../../core";
+import { colors, breakpoints } from "../../core";
 
 const { darkBlue, skyBlue } = colors;
 
@@ -10,6 +10,10 @@ export const InformationContainer = styled.div`
   padding: 3rem;
 
   ${({ css }) => css}
+
+  @media (max-width: ${breakpoints.sm}px) {
+    padding: 1rem 2rem;
+  }
 `;
 
 export const InformationTitle = styled.div`
@@ -36,10 +40,6 @@ export const InformationContentItem = styled.div`
   align-items: center;
   padding: 1.5rem 0;
 
-  span {
-    margin: 0 1rem;
-  }
-
   .info-icon-container {
     height: 30px;
     width: 30px;
@@ -51,4 +51,10 @@ export const InformationContentItem = styled.div`
       fill: ${skyBlue};
     }
   }
+`;
+
+export const InformationContentSpan = styled.span`
+  margin: 0 1rem;
+
+  ${({ css }) => css}
 `;

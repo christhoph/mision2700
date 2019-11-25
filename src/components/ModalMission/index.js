@@ -1,35 +1,37 @@
 import React from "react";
 
-import { Modal, VideoVimeo } from "../../core";
+import { Modal, VideoYoutube, breakpoints } from "../../core";
 
-const ModalMission = ({ open, onClose }) => (
-  <Modal
-    open={open}
-    onClose={onClose}
-    css={`
-      background: none;
+const ModalMission = ({ open, onClose }) => {
+  const w = window.innerWidth;
+  let opts;
 
-      .mission-video {
-        height: 100%;
-        width: 100%;
+  if (w < breakpoints.sm) opts = { height: "180", width: "325" };
+  if (w > breakpoints.md) opts = { height: "500", width: "900" };
 
-        iframe {
-          height: 100%;
-          width: 100%;
+  return (
+    <Modal
+      open={open}
+      onClose={onClose}
+      css={`
+        background: none;
+      `}
+      closeIconCss={`
+        top: 40px;
+        right: 0;
+  
+        svg {
+          fill: white;
         }
-      }
-    `}
-    closeIconCss={`
-      top: 30px;
-      right: -20px;
 
-      svg {
-        fill: white;
-      }
-    `}
-  >
-    <VideoVimeo className="mission-video" video={373764053} />
-  </Modal>
-);
+        @media (max-width: ${breakpoints.sm}px) {
+          top: -20px;
+        }
+      `}
+    >
+      <VideoYoutube video="eNqHbEOhfqo" opts={opts} />
+    </Modal>
+  );
+};
 
 export default ModalMission;

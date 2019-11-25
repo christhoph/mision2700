@@ -37,7 +37,7 @@ export const DonateButtonContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
 `;
 
 export const DonateButton = styled.button`
@@ -45,7 +45,6 @@ export const DonateButton = styled.button`
   border: 2px solid ${donateGreen};
   border-radius: 5px;
   padding: 0.75rem 5rem;
-  margin: 1rem 0;
   color: ${white};
   font-size: 1.6rem;
   letter-spacing: 0.05rem;

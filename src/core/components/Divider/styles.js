@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { colors } from "../../styles";
+import { breakpoints } from "../../constants";
 
 const { darkBlue } = colors;
 
@@ -10,4 +11,8 @@ export const DividerContainer = styled.div`
   margin: 2rem 0;
 
   ${({ css }) => css}
+
+  @media (max-width: ${breakpoints.sm}px) {
+    margin: 0.5rem;
+  }
 `;

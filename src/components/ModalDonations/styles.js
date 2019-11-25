@@ -1,40 +1,60 @@
 import styled from "styled-components";
 
-import { colors } from "../../core";
+import { colors, breakpoints } from "../../core";
 
-const { darkBlue } = colors;
+const { donateGreen } = colors;
 
 export const ModalDonationsContainer = styled.div`
   height: 450px;
-  width: 700px;
+  width: 750px;
   display: flex;
+
+  @media (max-width: ${breakpoints.sm}px) {
+    height: 600px;
+    width: 100%;
+    max-width: 360px;
+    flex-direction: column;
+  }
 `;
 
 export const ModalDonationsImage = styled.img`
   height: 100%;
   width: 300px;
+
+  @media (max-width: ${breakpoints.sm}px) {
+    height: 225px;
+    width: 100%;
+  }
 `;
 
 export const ModalDonationsContent = styled.div`
   height: 100%;
-  width: 400px;
+  width: 450px;
   display: flex;
   flex-direction: column;
-  padding: 2.5rem;
+  padding: 1rem 2rem;
+
+  @media (max-width: ${breakpoints.sm}px) {
+    width: 100%;
+  }
 `;
 
-export const ModalDonationsTitle = styled.h3`
-  margin: 0.5rem 0;
-  color: ${darkBlue};
-  text-align: center;
+export const ModalDonationsHashtag = styled.img`
+  width: 370px;
+
+  @media (max-width: ${breakpoints.sm}px) {
+    width: 100%;
+  }
 `;
 
-export const ModalDonationsText = styled.p`
+export const ModalDonationsText = styled.div`
   margin: 0.75rem 0;
 `;
 
-export const ModalDonationsTextEmphasis = styled.span`
-  color: ${darkBlue};
+export const ModalDonationsTextEmphasis = styled.p`
+  min-width: 85px;
+  display: inline-block;
+  color: ${donateGreen};
   font-weight: bold;
 
   ${({ css }) => css}
