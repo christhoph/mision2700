@@ -28,17 +28,18 @@ const AboutMission = () => {
         <AboutMissionInfo>
           <AboutMissionInfoTitle>¿Qué es la Misión 2700?</AboutMissionInfoTitle>
           <AboutMissionInfoText>
-            Es un recorrido en el cuál visitamos 15 ciudades del Ecuador durante
-            23 días para entregar de manera gratuita nuestra tecnología EyeClip
-            que mejora la autonomía, la movilidad y la calidad de vida de niños
-            y jóvenes con discapacidad visual de escasos recursos económicos.
+            Es un recorrido en el cual ayudamos a más de 300 niños con
+            discapacidad visual de escasos recursos económicos. Recorremos 15
+            ciudades durante 23 días por todo el Ecuador. Entregamos de manera
+            gratuita nuestro dispositivo Eyeclip para mejorar autonomía,
+            movilidad y calidad de vida de nuestros niños.
           </AboutMissionInfoText>
           <AboutMissionInfoText
             css={`
               text-align: center;
             `}
           >
-            ÚNETE tú también!
+            SÚMATE tú también!
           </AboutMissionInfoText>
         </AboutMissionInfo>
         <AboutMissionVideo>

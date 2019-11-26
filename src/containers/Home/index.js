@@ -44,7 +44,7 @@ const Home = () => {
     mission.states.filter(({ cities }) => cities && cities.length);
 
   const renderDonateButton = (
-    <DonateButton onClick={toggleOpenModal}>DONA</DonateButton>
+    <DonateButton onClick={toggleOpenModal}>Súmate</DonateButton>
   );
 
   return (

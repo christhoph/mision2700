@@ -32,7 +32,7 @@ const Information = ({
       parseInt(now[1], 10) - 1,
       parseInt(now[2], 10)
     ]);
-    const missionInit = moment([2019, 10, 28]);
+    const missionInit = moment([2019, 10, 27]);
     const getDays = setNow.diff(missionInit, "days");
     setMissionDays(getDays < totalDays + 1 ? getDays : totalDays);
   }, []);

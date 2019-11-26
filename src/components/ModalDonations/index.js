@@ -63,7 +63,7 @@ const ModalDonations = ({ open, onClose }) => {
               title="Dirección"
               text="Toledo N23-158 y Madrid esquina"
             />
-            <ModalDonationsInfo title="E-mail" text="contabilidad@sais3d.com" />
+            <ModalDonationsInfo title="E-mail" text="info@handeyes.org" />
           </ModalDonationsContent>
         </ScrollableContainer>
       </ModalDonationsContainer>
