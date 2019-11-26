@@ -20,6 +20,19 @@ const Navbar = () => (
     </LogoContainer>
     <NavbarTitle>Misión 2700</NavbarTitle>
     <LogoContainer>
+      <a
+        href="https://www.paypal.me/HANDEYES"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <LogoImage
+          css={`
+            margin-right: 2rem;
+          `}
+          src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/032016/untitled-1_290.png"
+          alt="paypal"
+        />
+      </a>
       <a href="http://handeyes.org/" target="_blank" rel="noopener noreferrer">
         <LogoImage
           className="hand-eyes-logo"

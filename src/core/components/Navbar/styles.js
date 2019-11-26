@@ -31,19 +31,6 @@ export const LogoContainer = styled.div`
 
 export const LogoImage = styled.img`
   height: 100%;
-`;
 
-export const MenuContainer = styled.nav`
-  height: 100%;
-  width: max-content;
-  display: flex;
-`;
-
-export const MenuItem = styled.div`
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
-  margin: 0 1rem;
+  ${({ css }) => css}
 `;
