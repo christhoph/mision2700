@@ -27,7 +27,7 @@ export const AboutMissionInfoTitle = styled.h3`
 `;
 
 export const AboutMissionInfoText = styled.p`
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   letter-spacing: 0.01rem;
   line-height: 1.5rem;
   text-align: justify;

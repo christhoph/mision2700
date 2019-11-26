@@ -1,13 +1,7 @@
 import React, { useState, useCallback, useEffect } from "react";
 import axios from "axios";
 
-import {
-  HomeContainer,
-  HomeTitleContainer,
-  HomeTitle,
-  DonateButtonContainer,
-  DonateButton
-} from "./styles";
+import { HomeContainer, DonateButtonContainer, DonateButton } from "./styles";
 import { ContentSize, breakpoints } from "../../core";
 import MissionMap from "../../components/MissionMap";
 import Information from "../../components/Information";
@@ -49,9 +43,6 @@ const Home = () => {
 
   return (
     <HomeContainer>
-      <HomeTitleContainer>
-        <HomeTitle>Misión 2700</HomeTitle>
-      </HomeTitleContainer>
       <ContentSize
         css={`
           @media (max-width: ${breakpoints.sm}px) {

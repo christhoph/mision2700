@@ -23,8 +23,23 @@ export const PartnersHashtag = styled.img`
   }
 `;
 
+export const PartnerImageContent = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  @media (max-width: ${breakpoints.sm}px) {
+    flex-direction: column;
+  }
+`;
+
 export const PartnerImage = styled.img`
   margin: 2rem 1rem;
 
   ${({ css }) => css}
+
+  @media (max-width: ${breakpoints.sm}px) {
+    margin: 3rem 1rem;
+  }
 `;

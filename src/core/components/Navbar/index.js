@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { NavbarContainer, LogoContainer, LogoImage } from "./styles";
+import {
+  NavbarContainer,
+  NavbarTitle,
+  LogoContainer,
+  LogoImage
+} from "./styles";
 
 const Navbar = () => (
   <NavbarContainer>
@@ -12,6 +17,9 @@ const Navbar = () => (
           alt="mision 2700 2da edicion"
         />
       </Link>
+    </LogoContainer>
+    <NavbarTitle>Misión 2700</NavbarTitle>
+    <LogoContainer>
       <a href="http://handeyes.org/" target="_blank" rel="noopener noreferrer">
         <LogoImage
           className="hand-eyes-logo"

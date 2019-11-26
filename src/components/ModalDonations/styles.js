@@ -22,8 +22,9 @@ export const ModalDonationsImage = styled.img`
   width: 300px;
 
   @media (max-width: ${breakpoints.sm}px) {
-    height: 225px;
-    width: 100%;
+    height: initial;
+    width: 200px;
+    align-self: center;
   }
 `;
 

@@ -29,10 +29,14 @@ const AboutMission = () => {
           <AboutMissionInfoTitle>¿Qué es la Misión 2700?</AboutMissionInfoTitle>
           <AboutMissionInfoText>
             Es un recorrido en el cual ayudamos a más de 300 niños con
-            discapacidad visual de escasos recursos económicos. Recorremos 15
-            ciudades durante 23 días por todo el Ecuador. Entregamos de manera
-            gratuita nuestro dispositivo Eyeclip para mejorar autonomía,
-            movilidad y calidad de vida de nuestros niños.
+            discapacidad visual de escasos recursos económicos.
+          </AboutMissionInfoText>
+          <AboutMissionInfoText>
+            Recorremos 15 ciudades durante 17 días por todo el Ecuador.
+          </AboutMissionInfoText>
+          <AboutMissionInfoText>
+            Entregamos de manera gratuita nuestro dispositivo Eyeclip para
+            mejorar autonomía, movilidad y calidad de vida de nuestros niños.
           </AboutMissionInfoText>
           <AboutMissionInfoText
             css={`
