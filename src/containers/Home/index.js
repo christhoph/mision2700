@@ -45,6 +45,8 @@ const Home = () => {
     <HomeContainer>
       <ContentSize
         css={`
+          min-height: 600px;
+
           @media (max-width: ${breakpoints.sm}px) {
             flex-direction: column-reverse;
             align-items: center;

@@ -7,7 +7,7 @@ const { darkBlue, skyBlue } = colors;
 export const InformationContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 3rem;
+  padding: 1rem 3rem;
 
   ${({ css }) => css}
 
@@ -38,7 +38,7 @@ export const InformationContentItem = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 
   .info-icon-container {
     height: 30px;

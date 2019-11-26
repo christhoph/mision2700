@@ -6,7 +6,7 @@ const { donateGreen } = colors;
 
 export const ModalDonationsContainer = styled.div`
   height: 500px;
-  width: 750px;
+  width: 800px;
   display: flex;
 
   @media (max-width: ${breakpoints.sm}px) {
@@ -19,7 +19,7 @@ export const ModalDonationsContainer = styled.div`
 
 export const ModalDonationsImage = styled.img`
   height: initial;
-  width: 300px;
+  width: 350px;
 
   @media (max-width: ${breakpoints.sm}px) {
     width: 200px;

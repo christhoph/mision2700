@@ -93,7 +93,11 @@ const Information = ({
           Días
         </InformationContentItem>
       </InformationContent>
-      <Divider />
+      <Divider
+        css={`
+          margin: 1rem 0;
+        `}
+      />
       <InformationContent css="align-items: center;">
         {renderDonateButton}
       </InformationContent>
