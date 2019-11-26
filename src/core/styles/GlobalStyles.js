@@ -22,6 +22,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-display: auto;
     overflow: hidden auto;
   }
 

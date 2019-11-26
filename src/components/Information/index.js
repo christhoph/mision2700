@@ -69,7 +69,7 @@ const Information = ({
           <InformationContentSpan
             css={`
               color: ${donateGreen};
-              font-size: 18px;
+              font-size: 20px;
             `}
           >
             0 / 300
@@ -85,7 +85,7 @@ const Information = ({
           <InformationContentSpan
             css={`
               color: ${donateGreen};
-              font-size: 18px;
+              font-size: 20px;
             `}
           >
             {missionDays} / {totalDays}

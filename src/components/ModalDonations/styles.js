@@ -5,7 +5,7 @@ import { colors, breakpoints } from "../../core";
 const { donateGreen } = colors;
 
 export const ModalDonationsContainer = styled.div`
-  height: 450px;
+  height: 500px;
   width: 750px;
   display: flex;
 
@@ -18,11 +18,10 @@ export const ModalDonationsContainer = styled.div`
 `;
 
 export const ModalDonationsImage = styled.img`
-  height: 100%;
+  height: initial;
   width: 300px;
 
   @media (max-width: ${breakpoints.sm}px) {
-    height: initial;
     width: 200px;
     align-self: center;
   }
@@ -33,6 +32,7 @@ export const ModalDonationsContent = styled.div`
   width: 450px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   padding: 1rem 2rem;
 
   @media (max-width: ${breakpoints.sm}px) {
