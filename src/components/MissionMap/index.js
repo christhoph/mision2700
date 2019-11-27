@@ -108,8 +108,8 @@ const MissionMap = ({ containerCss, allStates, states }) => {
           padding-bottom: 0;
 
           @media (max-width: ${breakpoints.sm}px) {
-            height: 85vh !important;
-            max-height: 90vh !important;
+            height: 85vh;
+            max-height: 90vh;
             padding: 0;
           }
         `}

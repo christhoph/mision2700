@@ -27,13 +27,13 @@ export const MissionMapContainer = styled.div`
     }
   }
 
-  ${({ css }) => css}
-
   @media (max-width: 1150px) {
     .city-arrow-icon-container {
       display: none;
     }
   }
+
+  ${({ css }) => css}
 `;
 
 export const MissionMapChart = styled.div`
@@ -110,11 +110,11 @@ export const ModalInfoContent = styled.div`
   flex-direction: column;
   padding: 2rem 0;
 
-  ${({ css }) => css}
-
   @media (max-width: ${breakpoints.sm}px) {
     padding: 1rem 0;
   }
+
+  ${({ css }) => css}
 `;
 
 export const ModalInfoContentItem = styled.div`

@@ -11,7 +11,7 @@ import { ContentSize, breakpoints } from "../../core";
 const Partners = () => (
   <PartnersContainer>
     <PartnersHashtag
-      src="https://s3.us-east-2.amazonaws.com/mision20700.2018/page/hashtag_ya_me_sume.png"
+      src="https://s3.us-east-2.amazonaws.com/mision20700.2018/page/hashtag_yo_me_sume.png"
       alt="hashtag ya me sumé"
     />
     <ContentSize
@@ -100,6 +100,15 @@ const Partners = () => (
           css={`
             height: 198px;
             width: 201px;
+          `}
+        />
+      </PartnerImageContent>
+      <PartnerImageContent>
+        <PartnerImage
+          src="https://s3.us-east-2.amazonaws.com/mision20700.2018/page/sponsors/homo_demens.png"
+          css={`
+            height: 200px;
+            width: 200px;
           `}
         />
       </PartnerImageContent>

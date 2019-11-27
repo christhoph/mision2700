@@ -36,7 +36,7 @@ const ModalDonations = ({ open, onClose }) => (
         />
         <ModalDonationsContent>
           <ModalDonationsHashtag
-            src="https://s3.us-east-2.amazonaws.com/mision20700.2018/page/hashtag_ya_me_sume.png"
+            src="https://s3.us-east-2.amazonaws.com/mision20700.2018/page/hashtag_yo_me_sume.png"
             alt="hashtag ya me sumé"
           />
           <ModalDonationsTextEmphasis

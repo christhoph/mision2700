@@ -41,7 +41,8 @@ export const ModalDonationsContent = styled.div`
 `;
 
 export const ModalDonationsHashtag = styled.img`
-  width: 370px;
+  width: 300px;
+  align-self: center;
 
   @media (max-width: ${breakpoints.sm}px) {
     width: 100%;

@@ -37,9 +37,9 @@ export const PartnerImageContent = styled.div`
 export const PartnerImage = styled.img`
   margin: 2rem 1rem;
 
-  ${({ css }) => css}
-
   @media (max-width: ${breakpoints.sm}px) {
     margin: 3rem 1rem;
   }
+
+  ${({ css }) => css}
 `;

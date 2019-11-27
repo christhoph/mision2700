@@ -9,11 +9,11 @@ export const InformationContainer = styled.div`
   flex-direction: column;
   padding: 1rem 3rem;
 
-  ${({ css }) => css}
-
   @media (max-width: ${breakpoints.sm}px) {
     padding: 1rem 2rem;
   }
+
+  ${({ css }) => css}
 `;
 
 export const InformationTitle = styled.div`

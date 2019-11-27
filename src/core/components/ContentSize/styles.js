@@ -8,8 +8,6 @@ export const ContentSizeContainer = styled.div`
   display: flex;
   outline: none;
 
-  ${({ css }) => css}
-
   @media (max-width: ${breakpoints.md}px) {
     min-width: ${contentSizeBreakpoints.sm}px;
     max-width: ${contentSizeBreakpoints.md}px;
@@ -19,4 +17,6 @@ export const ContentSizeContainer = styled.div`
     min-width: 300px;
     max-width: ${contentSizeBreakpoints.sm}px;
   }
+
+  ${({ css }) => css}
 `;

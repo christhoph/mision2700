@@ -10,9 +10,9 @@ export const DividerContainer = styled.div`
   border-bottom: 2px solid ${darkBlue};
   margin: 2rem 0;
 
-  ${({ css }) => css}
-
   @media (max-width: ${breakpoints.sm}px) {
     margin: 0.5rem;
   }
+
+  ${({ css }) => css}
 `;

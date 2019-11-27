@@ -25,8 +25,6 @@ export const ModalContent = styled.div`
   outline: none;
   position: relative;
 
-  ${({ css }) => css}
-
   .close-icon-container {
     height: 30px;
     width: 30px;
@@ -46,4 +44,6 @@ export const ModalContent = styled.div`
   @media (max-width: ${breakpoints.sm}px) {
     height: 100%;
   }
+
+  ${({ css }) => css}
 `;
