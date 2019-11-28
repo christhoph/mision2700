@@ -26,6 +26,10 @@ const Navbar = () => {
         css={`
           display: flex;
 
+          & a {
+            width: max-content;
+          }
+
           @media (max-width: ${breakpoints.sm}px) {
             height: 40px;
             margin-top: 10px;

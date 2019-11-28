@@ -21,7 +21,7 @@ const Information = ({
   renderDonateButton
 }) => {
   const [missionDays, setMissionDays] = useState(0);
-  const totalDays = 17;
+  const totalDays = 23;
 
   useEffect(() => {
     const now = moment()
@@ -69,10 +69,10 @@ const Information = ({
           <InformationContentSpan
             css={`
               color: ${donateGreen};
-              font-size: 20px;
+              font-size: 22px;
             `}
           >
-            0 / 300
+            18 / 300
           </InformationContentSpan>
           Beneficiados
         </InformationContentItem>
@@ -85,7 +85,7 @@ const Information = ({
           <InformationContentSpan
             css={`
               color: ${donateGreen};
-              font-size: 20px;
+              font-size: 22px;
             `}
           >
             {missionDays} / {totalDays}

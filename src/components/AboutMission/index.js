@@ -32,7 +32,7 @@ const AboutMission = () => {
             discapacidad visual de escasos recursos económicos.
           </AboutMissionInfoText>
           <AboutMissionInfoText>
-            Recorremos 15 ciudades durante 17 días por todo el Ecuador.
+            Recorremos 15 ciudades durante 23 días por todo el Ecuador.
           </AboutMissionInfoText>
           <AboutMissionInfoText>
             Entregamos de manera gratuita nuestro dispositivo Eyeclip para
