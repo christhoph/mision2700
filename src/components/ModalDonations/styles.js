@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 import { colors, breakpoints } from "../../core";
 
-const { donateGreen } = colors;
+const { donateGreen, white } = colors;
 
 export const ModalDonationsContainer = styled.div`
-  height: 500px;
-  width: 800px;
+  height: 550px;
+  width: 850px;
   display: flex;
 
   @media (max-width: ${breakpoints.sm}px) {
@@ -19,7 +19,7 @@ export const ModalDonationsContainer = styled.div`
 
 export const ModalDonationsImage = styled.img`
   height: initial;
-  width: 350px;
+  width: 400px;
 
   @media (max-width: ${breakpoints.sm}px) {
     width: 200px;
@@ -60,4 +60,15 @@ export const ModalDonationsTextEmphasis = styled.p`
   font-weight: bold;
 
   ${({ css }) => css}
+`;
+
+export const ModalDonationsButton = styled.a`
+  background: ${donateGreen};
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: ${white};
+  font-weight: bold;
 `;

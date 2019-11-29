@@ -18,8 +18,11 @@ export const PartnersContainer = styled.div`
 `;
 
 export const PartnersHashtag = styled.img`
+  margin-bottom: 1rem;
+
   @media (max-width: ${breakpoints.sm}px) {
     width: 100%;
+    margin-top: 1rem;
   }
 `;
 

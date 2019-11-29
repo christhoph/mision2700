@@ -6,7 +6,8 @@ import {
   ModalDonationsContent,
   ModalDonationsHashtag,
   ModalDonationsText,
-  ModalDonationsTextEmphasis
+  ModalDonationsTextEmphasis,
+  ModalDonationsButton
 } from "./styles";
 import { Modal, ScrollableContainer, breakpoints } from "../../core";
 
@@ -66,6 +67,13 @@ const ModalDonations = ({ open, onClose }) => (
           >
             Muchas gracias!
           </ModalDonationsTextEmphasis>
+          <ModalDonationsButton
+            href="https://api.whatsapp.com/send?phone=593991621937&text=Hola,%20quiero%20SUMAR%20mi%20granito%20de%20arena%20para%20los%20ni%C3%B1os%20de%20la%20misi%C3%B3n2700"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            SUMAR por WhatsApp
+          </ModalDonationsButton>
         </ModalDonationsContent>
       </ScrollableContainer>
     </ModalDonationsContainer>

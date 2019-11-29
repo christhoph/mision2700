@@ -29,6 +29,7 @@ export const NavbarTitle = styled.h1`
   white-space: nowrap;
 
   @media (max-width: ${breakpoints.sm}px) {
+    margin-bottom: 0.5rem;
     position: absolute;
     bottom: 0;
   }

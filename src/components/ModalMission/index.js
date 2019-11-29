@@ -6,7 +6,7 @@ const ModalMission = ({ open, onClose }) => {
   const w = window.innerWidth;
   let opts;
 
-  if (w < breakpoints.sm) opts = { height: "180", width: "325" };
+  if (w < breakpoints.sm) opts = { height: "180", width: "320" };
   if (w > breakpoints.md) opts = { height: "500", width: "900" };
 
   return (

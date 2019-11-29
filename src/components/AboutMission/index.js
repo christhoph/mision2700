@@ -13,7 +13,7 @@ const AboutMission = () => {
   const w = window.innerWidth;
   let opts;
 
-  if (w < breakpoints.sm) opts = { height: "180", width: "325" };
+  if (w < breakpoints.sm) opts = { height: "180", width: "320" };
   if (w > breakpoints.md) opts = { height: "240", width: "430" };
 
   return (

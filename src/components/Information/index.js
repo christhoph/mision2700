@@ -72,7 +72,7 @@ const Information = ({
               font-size: 22px;
             `}
           >
-            18 / 300
+            28 / 300
           </InformationContentSpan>
           Beneficiados
         </InformationContentItem>
