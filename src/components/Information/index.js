@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import * as moment from "moment";
+import { useCountUp } from "react-countup";
+import moment from "moment";
 
 import {
   InformationContainer,
@@ -12,6 +13,21 @@ import { SVGIcons, EyeClipIcon, Divider, colors } from "../../core";
 import ModalDonations from "../ModalDonations";
 
 const { skyBlue, donateGreen } = colors;
+
+const InfoCountUp = ({ end, total }) => {
+  const { countUp } = useCountUp({ end });
+
+  return (
+    <InformationContentSpan
+      css={`
+        color: ${donateGreen};
+        font-size: 22px;
+      `}
+    >
+      {`${countUp} / ${total}`}
+    </InformationContentSpan>
+  );
+};
 
 const Information = ({
   containerCss,
@@ -36,6 +52,8 @@ const Information = ({
     const getDays = setNow.diff(missionInit, "days");
     setMissionDays(getDays < totalDays + 1 ? getDays : totalDays);
   }, []);
+
+  if (missionDays === 0) return null;
 
   return (
     <InformationContainer css={containerCss}>
@@ -66,14 +84,7 @@ const Information = ({
             iconSize={28}
             iconColor={skyBlue}
           />
-          <InformationContentSpan
-            css={`
-              color: ${donateGreen};
-              font-size: 22px;
-            `}
-          >
-            28 / 300
-          </InformationContentSpan>
+          <InfoCountUp end={28} total={300} />
           Beneficiados
         </InformationContentItem>
         <InformationContentItem>
@@ -82,14 +93,7 @@ const Information = ({
             iconClass="info-icon"
             iconName="calendar_icon"
           />
-          <InformationContentSpan
-            css={`
-              color: ${donateGreen};
-              font-size: 22px;
-            `}
-          >
-            {missionDays} / {totalDays}
-          </InformationContentSpan>
+          <InfoCountUp end={missionDays} total={totalDays} />
           Días
         </InformationContentItem>
       </InformationContent>

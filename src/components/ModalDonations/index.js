@@ -17,20 +17,17 @@ const ModalDonations = ({ open, onClose }) => (
     onClose={onClose}
     css={`
       height: max-content;
+      max-height: 550px;
       width: max-content;
       padding: 0;
+
+      @media (max-width: ${breakpoints.sm}px) {
+        max-height: max-content;
+      }
     `}
   >
-    <ModalDonationsContainer>
-      <ScrollableContainer
-        css={`
-          flex-direction: row;
-
-          @media (max-width: ${breakpoints.sm}px) {
-            flex-direction: column;
-          }
-        `}
-      >
+    <ScrollableContainer>
+      <ModalDonationsContainer>
         <ModalDonationsImage
           src="https://s3.us-east-2.amazonaws.com/mision20700.2018/foto+modal+ya+me+sum%C3%A9/huaira+baja.png"
           alt="hand eyes - mision 2700"
@@ -75,8 +72,8 @@ const ModalDonations = ({ open, onClose }) => (
             SUMAR por WhatsApp
           </ModalDonationsButton>
         </ModalDonationsContent>
-      </ScrollableContainer>
-    </ModalDonationsContainer>
+      </ModalDonationsContainer>
+    </ScrollableContainer>
   </Modal>
 );
 

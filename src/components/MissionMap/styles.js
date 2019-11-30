@@ -41,14 +41,20 @@ export const MissionMapChart = styled.div`
   width: 100%;
 `;
 
+export const ModalContentContainer = styled.div`
+  height: 650px;
+  width: 100%;
+`;
+
 export const ModalContentUp = styled.div`
   height: 75%;
+  min-height: 480px;
   width: 100%;
   display: flex;
+  padding-top: 1rem;
 
   @media (max-width: ${breakpoints.sm}px) {
     height: max-content;
-    max-height: 800px;
     flex-direction: column;
   }
 `;
@@ -151,7 +157,9 @@ export const ModalInfoContentItem = styled.div`
 
 export const ModalContentDown = styled.div`
   height: 25%;
+  min-height: 160px;
   width: 100%;
+  padding: 0 1rem;
 
   @media (max-width: ${breakpoints.sm}px) {
     min-height: 160px;
@@ -192,6 +200,7 @@ export const ModalSlide = styled.div`
 `;
 
 export const ModalSlideImage = styled.img`
+  max-height: 110px;
   ${({ isVertical }) =>
     isVertical
       ? `

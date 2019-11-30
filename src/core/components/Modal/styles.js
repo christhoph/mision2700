@@ -45,5 +45,9 @@ export const ModalContent = styled.div`
     height: 100%;
   }
 
+  @media (max-height: 650px) {
+    height: 95vh;
+  }
+
   ${({ css }) => css}
 `;
