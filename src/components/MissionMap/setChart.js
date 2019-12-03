@@ -29,31 +29,69 @@ export const setChart = (
   chart.minZoomLevel = 2.5;
   chart.maxZoomLevel = 2.5;
 
-  let polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
-  polygonSeries.useGeodata = true;
-  polygonSeries.mapPolygons.template.nonScalingStroke = true;
+  const filterProvinces = provinces.filter(({ hasCities }) => hasCities);
+  const filterExcludedProvinces = provinces.filter(
+    ({ hasCities }) => !hasCities
+  );
+  var excludedProvinces = [];
 
-  polygonSeries.data = provinces;
+  filterProvinces.forEach(province => {
+    var series = chart.series.push(new am4maps.MapPolygonSeries());
+    series.name = province.name;
+    series.useGeodata = true;
+    series.mapPolygons.template.nonScalingStroke = true;
 
-  var polygonTemplate = polygonSeries.mapPolygons.template;
-  polygonTemplate.fill = am4core.color("#b3caee");
+    var includedProvinces = [];
+    includedProvinces.push(province.id);
+    excludedProvinces.push(province.id);
+
+    series.include = includedProvinces;
+    series.fill = am4core.color("#b3caee");
+
+    var polygonTemplate = series.mapPolygons.template;
+    polygonTemplate.fill = am4core.color("#b3caee");
+    polygonTemplate.tooltipText = `{name}\n
+      Personas con
+      Discapacidad Visual: {value}
+    `;
+    polygonTemplate.nonScalingStroke = true;
+    polygonTemplate.strokeWidth = 0.5;
+    polygonTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer;
+    polygonTemplate.events.on(
+      "hit",
+      ({
+        target: {
+          dataItem: {
+            dataContext: { id }
+          }
+        }
+      }) => {
+        const findState = states.find(({ map_id }) => map_id === id);
+        toggleOpenModal();
+        handleSetStateSelected(findState);
+      }
+    );
+    var hs = polygonTemplate.states.create("hover");
+    hs.properties.fill = am4core.color("#3c5bdc");
+    series.data = filterProvinces;
+  });
+
+  var countrySeries = chart.series.push(new am4maps.MapPolygonSeries());
+  countrySeries.useGeodata = true;
+  countrySeries.exclude = excludedProvinces;
+  countrySeries.fillOpacity = 0.8;
+  countrySeries.hiddenInLegend = true;
+  countrySeries.mapPolygons.template.nonScalingStroke = true;
+  countrySeries.data = filterExcludedProvinces;
+
+  var polygonTemplate = countrySeries.mapPolygons.template;
+  polygonTemplate.fill = am4core.color("#ccc");
   polygonTemplate.tooltipText = `{name}\n
     Personas con
     Discapacidad Visual: {value}
   `;
   polygonTemplate.nonScalingStroke = true;
   polygonTemplate.strokeWidth = 0.5;
-  polygonTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer;
-  polygonTemplate.events.on("hit", e => {
-    const selectName = e.target.dataItem.dataContext.name;
-    const findState = states.find(({ name }) => name === selectName);
-    if (findState && findState.cities) {
-      toggleOpenModal();
-      handleSetStateSelected(findState);
-    }
-  });
-  var hs = polygonTemplate.states.create("hover");
-  hs.properties.fill = am4core.color("#3c5bdc");
 
   let cities = chart.series.push(new am4maps.MapImageSeries());
   cities.mapImages.template.nonScaling = true;
@@ -65,17 +103,17 @@ export const setChart = (
   city.verticalCenter = "bottom";
   city.fill = am4core.color("#1e75b8");
 
-  const addCity = (coords, title, index) => {
+  const addCity = (latitude, longitude, title, index) => {
     let city = cities.mapImages.create();
-    city.latitude = coords.latitude;
-    city.longitude = coords.longitude;
+    city.latitude = latitude;
+    city.longitude = longitude;
     city.tooltip.dy = -30;
     city.tooltipText = `${index} - ${title}`;
     return city;
   };
 
-  const setCities = citiesData.map(({ name, coords }, index) =>
-    addCity(coords, name, index + 1)
+  const setCities = citiesData.map(({ latitude, longitude, name }, index) =>
+    addCity(latitude, longitude, name, index + 1)
   );
 
   let lineSeries = chart.series.push(new am4maps.MapArcSeries());

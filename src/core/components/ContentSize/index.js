@@ -1,4 +1,5 @@
 import React, { forwardRef } from "react";
+import PropTypes from "prop-types";
 
 import { ContentSizeContainer } from "./styles";
 
@@ -7,6 +8,10 @@ const ContentSize = forwardRef(({ children, css }, ref) => (
     {children}
   </ContentSizeContainer>
 ));
+ContentSize.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.object]).isRequired,
+  css: PropTypes.string
+};
 ContentSize.defaultProps = {
   css: ""
 };

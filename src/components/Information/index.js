@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useCountUp } from "react-countup";
 import moment from "moment";
+import PropTypes from "prop-types";
 
 import {
   InformationContainer,
@@ -27,6 +28,10 @@ const InfoCountUp = ({ end, total }) => {
       {`${countUp} / ${total}`}
     </InformationContentSpan>
   );
+};
+InfoCountUp.propTypes = {
+  end: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired
 };
 
 const Information = ({
@@ -84,7 +89,7 @@ const Information = ({
             iconSize={28}
             iconColor={skyBlue}
           />
-          <InfoCountUp end={28} total={300} />
+          <InfoCountUp end={103} total={300} />
           Beneficiados
         </InformationContentItem>
         <InformationContentItem>
@@ -109,8 +114,18 @@ const Information = ({
     </InformationContainer>
   );
 };
+Information.propTypes = {
+  containerCss: PropTypes.string,
+  visitCities: PropTypes.number,
+  openModal: PropTypes.bool,
+  toggleOpenModal: PropTypes.func.isRequired,
+  renderDonateButton: PropTypes.oneOfType([PropTypes.node, PropTypes.object])
+    .isRequired
+};
 Information.defaultProps = {
-  visitCities: 0
+  containerCss: "",
+  visitCities: 0,
+  openModal: false
 };
 
 export default Information;

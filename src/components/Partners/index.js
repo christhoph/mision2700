@@ -59,6 +59,22 @@ const Partners = () => (
       </PartnerImageContent>
       <PartnerImageContent>
         <PartnerImage
+          src="https://s3.us-east-2.amazonaws.com/mision20700.2018/page/sponsors/datamall.png"
+          css={`
+            height: 200px;
+            width: 300px;
+          `}
+        />
+        <PartnerImage
+          src="https://s3.us-east-2.amazonaws.com/mision20700.2018/page/sponsors/publistrategy.png"
+          css={`
+            height: 200px;
+            width: 300px;
+          `}
+        />
+      </PartnerImageContent>
+      <PartnerImageContent>
+        <PartnerImage
           src="https://s3.us-east-2.amazonaws.com/mision20700.2018/page/sponsors/maquinas_ec.png"
           css={`
             height: 132px;

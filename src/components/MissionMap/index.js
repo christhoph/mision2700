@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect } from "react";
+import PropTypes from "prop-types";
 
 import {
   SVGIcons,
@@ -26,11 +27,9 @@ import {
   ModalSlideImage
 } from "./styles";
 
-import { disVisual } from "./data";
-
 const { skyBlue } = colors;
 
-const MissionMap = ({ containerCss, allStates, states }) => {
+const MissionMap = ({ containerCss, allStates, visitCities }) => {
   const [openModal, setOpenModal] = useState(false);
   const [stateSelected, setStateSelected] = useState(null);
   const [showSlide, setShowSlide] = useState(null);
@@ -57,35 +56,29 @@ const MissionMap = ({ containerCss, allStates, states }) => {
     }
   }, [findImages, showSlide, openModal]);
 
-  const setAllStates =
-    allStates &&
-    allStates.map(({ map_id, value, cities }) => ({
-      id: map_id,
-      value,
-      hasCities: !!(cities && cities.length)
-    }));
-
-  // El metodo filter() es solo por la data local
-  // Cuando se tenga la data desde la API se debe remover el metodo filter()
-  // y usar el prop states, para obtener las ciudades
-  const getCities = disVisual.states
-    .filter(({ cities }) => cities && cities.length)
-    .map(({ cities }) =>
-      cities.reduce((prev, curr) => ({ ...prev, ...curr }), null)
-    )
-    .sort((a, b) => (a.position > b.position ? 1 : -1));
+  const setAllStates = allStates.map(({ map_id, men, women, cities }) => ({
+    id: map_id,
+    value: men + women,
+    hasCities: !!(cities && cities.length)
+  }));
 
   useEffect(() => {
     const chart = setChart(
       setAllStates,
       toggleOpenModal,
       handleSetStateSelected,
-      getCities,
-      disVisual.states
+      visitCities,
+      allStates
     );
 
     return () => chart.dispose();
-  }, [setAllStates, toggleOpenModal, handleSetStateSelected, getCities]);
+  }, [
+    setAllStates,
+    toggleOpenModal,
+    handleSetStateSelected,
+    visitCities,
+    allStates
+  ]);
 
   const w = window.innerWidth;
   let opts;
@@ -120,8 +113,8 @@ const MissionMap = ({ containerCss, allStates, states }) => {
             <ModalContentUp>
               {showSlide && (
                 <ModalView>
-                  {showSlide && showSlide.videoId ? (
-                    <VideoYoutube video={showSlide.videoId} opts={opts} />
+                  {showSlide && showSlide.video ? (
+                    <VideoYoutube video={showSlide.video} opts={opts} />
                   ) : (
                     <ModalViewImage
                       isVertical={showSlide.height > showSlide.width}
@@ -181,7 +174,7 @@ const MissionMap = ({ containerCss, allStates, states }) => {
                     />
                     <ModalSlideImage
                       isVertical={findImages[0].height > findImages[0].width}
-                      src={`https://img.youtube.com/vi/${findImages[0].videoId}/0.jpg`}
+                      src={`https://img.youtube.com/vi/${findImages[0].video}/0.jpg`}
                       alt="modal_slide"
                     />
                   </ModalSlide>
@@ -211,9 +204,15 @@ const MissionMap = ({ containerCss, allStates, states }) => {
     </MissionMapContainer>
   );
 };
+MissionMap.propTypes = {
+  containerCss: PropTypes.string,
+  allStates: PropTypes.array,
+  visitCities: PropTypes.array
+};
 MissionMap.defaultProps = {
+  containerCss: "",
   allStates: [],
-  states: []
+  visitCities: []
 };
 
 export default MissionMap;

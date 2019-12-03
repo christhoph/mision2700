@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { ScrollableContainerWrapper } from "./styles";
 
@@ -7,6 +8,11 @@ const ScrollableContainer = ({ refElement, css, children }) => (
     {children}
   </ScrollableContainerWrapper>
 );
+ScrollableContainer.propTypes = {
+  refElement: PropTypes.object,
+  css: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.object]).isRequired
+};
 ScrollableContainer.defaultProps = {
   refElement: null,
   css: ""

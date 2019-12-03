@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import {
   ModalDonationsContainer,
@@ -76,6 +77,13 @@ const ModalDonations = ({ open, onClose }) => (
     </ScrollableContainer>
   </Modal>
 );
+ModalDonations.propTypes = {
+  open: PropTypes.bool,
+  onClose: PropTypes.func.isRequired
+};
+ModalDonations.defaultProps = {
+  open: false
+};
 
 const ModalDonationsInfo = ({ title, text }) => (
   <ModalDonationsText>
@@ -83,5 +91,9 @@ const ModalDonationsInfo = ({ title, text }) => (
     {text}
   </ModalDonationsText>
 );
+ModalDonationsInfo.propTypes = {
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
+};
 
 export default ModalDonations;

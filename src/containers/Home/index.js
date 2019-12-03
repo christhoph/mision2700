@@ -15,25 +15,29 @@ import Partners from "../../components/Partners";
 
 const URL_API = process.env.REACT_APP_MISSIONS_API;
 
+const sorting = el => el.sort((a, b) => (a.position > b.position ? 1 : -1));
+
 const Home = () => {
   const [mission, setMission] = useState({});
+  const [visitCities, setVisitCities] = useState([]);
   const [openModal, setOpenModal] = useState(false);
 
   const toggleOpenModal = useCallback(() => setOpenModal(val => !val), []);
 
-  useEffect(() => {
-    axios(`${URL_API}/missions/`).then(res => {
-      const { data } = res;
-      const { countries } = data[0];
-      const findCountry = countries.find(({ name }) => name === "Ecuador");
-      setMission(findCountry);
-    });
-  }, []);
+  const handleFetchMissions = async () => {
+    await axios(`${URL_API}/missions/`).then(res =>
+      setMission(res.data[0].countries[0])
+    );
+  };
 
-  const filterStates =
-    mission &&
-    mission.states &&
-    mission.states.filter(({ cities }) => cities && cities.length);
+  const handleFetchCities = async () => {
+    await axios(`${URL_API}/cities/`).then(res => setVisitCities(res.data));
+  };
+
+  useEffect(() => {
+    handleFetchMissions();
+    handleFetchCities();
+  }, []);
 
   const renderDonateButton = (
     <DonateButton onClick={toggleOpenModal}>Súmate</DonateButton>
@@ -69,7 +73,7 @@ const Home = () => {
               width: 100%;
             }
           `}
-          visitCities={filterStates && filterStates.length}
+          visitCities={visitCities && visitCities.length}
           openModal={openModal}
           toggleOpenModal={toggleOpenModal}
           renderDonateButton={renderDonateButton}
@@ -88,7 +92,7 @@ const Home = () => {
             }
           `}
         allStates={mission && mission.states}
-        states={filterStates && filterStates}
+        visitCities={visitCities && sorting(visitCities)}
       />
       <Partners />
       <DonateButtonContainer>{renderDonateButton}</DonateButtonContainer>
