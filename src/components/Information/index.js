@@ -89,7 +89,7 @@ const Information = ({
             iconSize={28}
             iconColor={skyBlue}
           />
-          <InfoCountUp end={103} total={300} />
+          <InfoCountUp end={300} total={300} />
           Beneficiados
         </InformationContentItem>
         <InformationContentItem>
